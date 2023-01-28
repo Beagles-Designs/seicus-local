@@ -1,0 +1,73 @@
+# Translation of Plugins - Post Type Switcher - Development (trunk) in German
+# This file is distributed under the same license as the Plugins - Post Type Switcher - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-12-25 17:17:01+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.0-alpha.3\n"
+"Language: de\n"
+"Project-Id-Version: Plugins - Post Type Switcher - Development (trunk)\n"
+
+#: post-type-switcher.php:692
+msgctxt "verb"
+msgid "Sponsor"
+msgstr "Unterstützen"
+
+#. Author URI of the plugin
+msgid "https://jjj.software"
+msgstr "https://jjj.software"
+
+#. Author of the plugin
+msgid "Triple J Software, Inc."
+msgstr "Triple J Software, Inc."
+
+#. Description of the plugin
+msgid "A simple way to change a post's type in WordPress"
+msgstr "Ein einfacher Weg, den Inhaltstyp in WordPress zu ändern"
+
+#: post-type-switcher.php:424
+msgid "Sorry, you cannot do this."
+msgstr "Entschuldigung, aber das kannst du nicht tun."
+
+#: post-type-switcher.php:413
+msgid "Missing data."
+msgstr "Daten fehlen."
+
+#: post-type-switcher.php:370
+msgid "&mdash; No Change &mdash;"
+msgstr "&mdash; Keine Änderung &mdash;"
+
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/post-type-switcher"
+msgstr "https://de.wordpress.org/plugins/post-type-switcher/"
+
+#. Plugin Name of the plugin
+msgid "Post Type Switcher"
+msgstr "Post Type Switcher"
+
+#: post-type-switcher.php:225 post-type-switcher.php:252
+msgid "Post Type"
+msgstr "Inhaltstyp"
+
+#: post-type-switcher.php:183
+msgid "Type"
+msgstr "Typ"
+
+#: post-type-switcher.php:163
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: post-type-switcher.php:162
+msgid "OK"
+msgstr "﻿OK"
+
+#: post-type-switcher.php:147
+msgid "Edit"
+msgstr "﻿Bearbeiten"
+
+#: post-type-switcher.php:142
+msgid "Post Type:"
+msgstr "Inhaltstyp:"
