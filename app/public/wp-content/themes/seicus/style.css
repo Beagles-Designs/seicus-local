@@ -875,8 +875,14 @@ text-decoration: none;
     text-decoration: none!important;
 }
 
-.reveal-btn {
-  display: none;
+.content_button {
+  color:#f48000;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.hidden {
+  display: none!important;
 }
 
 /* archive */

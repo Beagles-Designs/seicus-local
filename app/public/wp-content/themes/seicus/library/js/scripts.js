@@ -400,8 +400,7 @@ $( ".search-button" ).click(function() {
  //resource read more function to make sure the specific PDF link is inserted into the Sign-up Form for after Submission 
  $('.rm-btn').click(function(){
     var link = $("#link-field").attr("href");
-    $('.reveal-btn').attr('href', link);
-    $('.reveal-btn').show();
+    $('.content_button').attr('href', link);
 });
 
 

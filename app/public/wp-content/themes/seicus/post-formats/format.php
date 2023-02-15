@@ -25,7 +25,7 @@
 	  			</div> -->
 	  	<?php
 	  	if ( get_field( "files" ) ): ?>
-			<div class="divider">
+			<div class="divider <?php if (get_field("enable_read_more") ): ?>hidden<?php endif; ?>">
 				<h3>Additional Resources</h3>
 				<a id="link-field" href="<?php the_field('files'); ?>">Download files</a>
 				<!-- <div class="pdf-icon">
@@ -75,7 +75,6 @@
 			<div class="resource-rm-container">
 				<p>Want to read the full report?<p>
 				<button class="rm-btn">Sign up to read more!</button>
-				<a class="reveal-btn" href="">Test</a>
 			</div>
 		<?php endif; ?>
 	</section> <?php // end article section ?>
