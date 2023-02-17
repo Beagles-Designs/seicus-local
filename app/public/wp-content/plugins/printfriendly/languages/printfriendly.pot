@@ -1,17 +1,17 @@
-# Copyright (C) 2022 Print, PDF, & Email by PrintFriendly
+# Copyright (C) 2023 Print, PDF, & Email by PrintFriendly
 # This file is distributed under the same license as the Print, PDF & Email by PrintFriendly plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Print, PDF & Email by PrintFriendly 5.2.3\n"
+"Project-Id-Version: Print, PDF & Email by PrintFriendly 5.4.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/printfriendly\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-05-28T06:41:17+00:00\n"
+"POT-Creation-Date: 2023-02-03T13:19:34+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.6.0\n"
+"X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: printfriendly\n"
 
 #. Plugin Name of the plugin
@@ -20,7 +20,7 @@ msgstr ""
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin
-msgid "http://www.printfriendly.com"
+msgid "https://www.printfriendly.com"
 msgstr ""
 
 #. Description of the plugin
@@ -31,94 +31,93 @@ msgstr ""
 msgid "Print, PDF, & Email by PrintFriendly"
 msgstr ""
 
-#: pf.php:661
+#: pf.php:740
 msgid "No valid custom image url received, please enter a valid url to use a custom image."
 msgstr ""
 
-#: pf.php:669
+#: pf.php:748
 msgid "The text size you entered is invalid, please stay between 9px and 25px"
 msgstr ""
 
-#: pf.php:677
+#: pf.php:756
 msgid "The color you entered is not valid, it must be a valid hexadecimal RGB font color."
 msgstr ""
 
-#: pf.php:732
+#: pf.php:819
 msgid "No valid custom logo url received, please enter a valid url to use a custom logo."
 msgstr ""
 
-#: pf.php:829
+#: pf.php:926
 msgid "PrintFriendly Options"
 msgstr ""
 
-#: pf.php:829
+#: pf.php:926
 msgid "Print Friendly & PDF"
 msgstr ""
 
-#: pf.php:862
-#: views/tabs.php:433
+#: pf.php:959
+#: views/tabs.php:447
 msgid "Custom Image"
 msgstr ""
 
-#: pf.php:863
+#: pf.php:960
 msgid "Use Image"
 msgstr ""
 
-#: pf.php:864
+#: pf.php:961
 msgid "Invalid Image URL"
 msgstr ""
 
-#: pf.php:878
+#: pf.php:975
 msgid "Activation"
 msgstr ""
 
-#: pf.php:879
+#: pf.php:976
 msgid "Checking status"
 msgstr ""
 
-#: pf.php:880
+#: pf.php:977
 #: views/pro.php:45
 msgid "Activate"
 msgstr ""
 
-#: pf.php:881
+#: pf.php:978
 msgid "Active Trial"
 msgstr ""
 
-#: pf.php:882
+#: pf.php:979
 msgid "Active"
 msgstr ""
 
-#: pf.php:883
+#: pf.php:980
 msgid "Expired"
 msgstr ""
 
-#: pf.php:884
+#: pf.php:981
 msgid "Please check Internet connection."
 msgstr ""
 
-#: pf.php:913
+#: pf.php:1010
 msgid "Settings"
 msgstr ""
 
-#: pf.php:937
+#: pf.php:1034
 #: views/tabs.php:108
-#: views/tabs.php:361
-#: views/tabs.php:474
+#: views/tabs.php:488
 msgid "Documentation"
 msgstr ""
 
-#: pf.php:1307
+#: pf.php:1414
 #: views/tabs.php:165
 msgid "Custom Button"
 msgstr ""
 
-#: pf.php:1506
+#: pf.php:1613
 msgid "Only display when post is in:"
 msgstr ""
 
-#: pf.php:1611
-msgid "You are currently using %1$s%2$s%3$s. You can copy copy its contents into the textbox if you want to update the styles."
+#: pf.php:1724
+msgid "You are currently using %1$s%2$s%3$s. You can copy its contents into the textbox if you want to update the styles."
 msgstr ""
 
 #: views/pro.php:18
@@ -126,7 +125,7 @@ msgid "Learn more"
 msgstr ""
 
 #: views/pro.php:30
-#: views/tabs.php:534
+#: views/tabs.php:546
 msgid "Email"
 msgstr ""
 
@@ -287,10 +286,10 @@ msgid "Show Options Code"
 msgstr ""
 
 #: views/tabs.php:96
-#: views/tabs.php:323
-#: views/tabs.php:331
-#: views/tabs.php:345
-#: views/tabs.php:353
+#: views/tabs.php:341
+#: views/tabs.php:349
+#: views/tabs.php:363
+#: views/tabs.php:371
 msgid "Copy Code"
 msgstr ""
 
@@ -311,7 +310,7 @@ msgid "Use Your Image"
 msgstr ""
 
 #: views/tabs.php:187
-#: views/tabs.php:439
+#: views/tabs.php:453
 msgid "Select Image"
 msgstr ""
 
@@ -348,395 +347,259 @@ msgid "Button Position"
 msgstr ""
 
 #: views/tabs.php:253
-msgid "Alignment"
-msgstr ""
-
-#: views/tabs.php:256
-msgid "Left Align"
-msgstr ""
-
-#: views/tabs.php:257
-msgid "Right Align"
-msgstr ""
-
-#: views/tabs.php:258
-msgid "Center"
-msgstr ""
-
-#: views/tabs.php:259
-msgid "None"
-msgstr ""
-
-#: views/tabs.php:265
 msgid "Placement"
 msgstr ""
 
-#: views/tabs.php:268
+#: views/tabs.php:256
 msgid "Above Content"
 msgstr ""
 
-#: views/tabs.php:269
+#: views/tabs.php:257
 msgid "Below Content"
 msgstr ""
 
-#: views/tabs.php:279
+#: views/tabs.php:263
+msgid "Alignment Method"
+msgstr ""
+
+#: views/tabs.php:266
+msgid "Default"
+msgstr ""
+
+#: views/tabs.php:267
+#: views/tabs.php:284
+#: views/tabs.php:589
+msgid "CSS"
+msgstr ""
+
+#: views/tabs.php:273
+msgid "Alignment"
+msgstr ""
+
+#: views/tabs.php:276
+msgid "Left Align"
+msgstr ""
+
+#: views/tabs.php:277
+msgid "Right Align"
+msgstr ""
+
+#: views/tabs.php:278
+msgid "Center"
+msgstr ""
+
+#: views/tabs.php:297
 msgid "Button Display"
 msgstr ""
 
-#: views/tabs.php:284
+#: views/tabs.php:302
 msgid "Pages to show on"
 msgstr ""
 
-#: views/tabs.php:286
+#: views/tabs.php:304
 msgid "Posts"
 msgstr ""
 
-#: views/tabs.php:287
+#: views/tabs.php:305
 msgid "Pages"
 msgstr ""
 
-#: views/tabs.php:288
+#: views/tabs.php:306
 msgid "Homepage"
 msgstr ""
 
-#: views/tabs.php:289
-msgid "Category Pages"
+#: views/tabs.php:307
+msgid "Category Index Pages"
 msgstr ""
 
-#: views/tabs.php:290
-msgid "Taxonomy Pages"
+#: views/tabs.php:308
+msgid "Taxonomy Index Pages"
 msgstr ""
 
-#: views/tabs.php:294
-msgid "Specific categories to show on"
+#: views/tabs.php:312
+msgid "Restrict to specific categories"
 msgstr ""
 
-#: views/tabs.php:316
+#: views/tabs.php:334
 msgid "Add direct to template"
 msgstr ""
 
-#: views/tabs.php:338
+#: views/tabs.php:356
 msgid "Use the shortcode"
 msgstr ""
 
-#: views/tabs.php:369
+#: views/tabs.php:383
 msgid "Pro Exclusive Features"
 msgstr ""
 
-#: views/tabs.php:375
+#: views/tabs.php:389
 msgid "Encode images"
 msgstr ""
 
-#: views/tabs.php:378
-#: views/tabs.php:389
-#: views/tabs.php:491
+#: views/tabs.php:392
+#: views/tabs.php:403
+#: views/tabs.php:505
 msgid "No"
 msgstr ""
 
-#: views/tabs.php:379
-#: views/tabs.php:390
-#: views/tabs.php:490
+#: views/tabs.php:393
+#: views/tabs.php:404
+#: views/tabs.php:504
 msgid "Yes"
 msgstr ""
 
-#: views/tabs.php:381
+#: views/tabs.php:395
 msgid "Select \"Yes\" if your site is not publicly accessible or if your provider blocks image requests from third parties or if images are not present in PDF"
 msgstr ""
 
-#: views/tabs.php:386
+#: views/tabs.php:400
 msgid "Show Hidden Content"
 msgstr ""
 
-#: views/tabs.php:392
+#: views/tabs.php:406
 msgid "By default PrintFriendly Pro will only show the visible content on the page. Select \"Yes\", if you want PrintFriendly to show hidden content. (Ex. Content in hidden tabs)"
 msgstr ""
 
-#: views/tabs.php:398
+#: views/tabs.php:412
 msgid "These features require a Pro subscription."
 msgstr ""
 
-#: views/tabs.php:398
+#: views/tabs.php:412
 msgid "Learn More"
 msgstr ""
 
-#: views/tabs.php:404
-#: views/tabs.php:604
+#: views/tabs.php:418
+#: views/tabs.php:630
 msgid "Save Options"
 msgstr ""
 
-#: views/tabs.php:405
-#: views/tabs.php:605
+#: views/tabs.php:419
+#: views/tabs.php:631
 msgid "Cancel"
 msgstr ""
 
-#: views/tabs.php:417
+#: views/tabs.php:431
 msgid "Page header"
 msgstr ""
 
-#: views/tabs.php:426
+#: views/tabs.php:440
 msgid "My Website Icon"
 msgstr ""
 
-#: views/tabs.php:454
+#: views/tabs.php:468
 msgid "Tagline (optional)"
 msgstr ""
 
-#: views/tabs.php:481
+#: views/tabs.php:495
 msgid "Features"
 msgstr ""
 
-#: views/tabs.php:487
+#: views/tabs.php:501
 msgid "Track in Google Analytics"
 msgstr ""
 
-#: views/tabs.php:497
+#: views/tabs.php:511
 msgid "Click to delete"
 msgstr ""
 
-#: views/tabs.php:500
-#: views/tabs.php:537
-#: views/tabs.php:547
-#: views/tabs.php:558
+#: views/tabs.php:514
+#: views/tabs.php:549
+#: views/tabs.php:559
+#: views/tabs.php:570
 msgid "Allow"
 msgstr ""
 
-#: views/tabs.php:501
-#: views/tabs.php:538
-#: views/tabs.php:548
-#: views/tabs.php:559
+#: views/tabs.php:515
+#: views/tabs.php:550
+#: views/tabs.php:560
+#: views/tabs.php:571
 msgid "Not Allow"
 msgstr ""
 
-#: views/tabs.php:503
-#: views/tabs.php:529
-msgid "Read documentation about this feature %1$shere%2$s"
-msgstr ""
-
-#: views/tabs.php:508
+#: views/tabs.php:521
 msgid "Image size"
 msgstr ""
 
-#: views/tabs.php:511
+#: views/tabs.php:524
 msgid "Full Size"
 msgstr ""
 
-#: views/tabs.php:512
+#: views/tabs.php:525
 msgid "Large"
 msgstr ""
 
-#: views/tabs.php:513
+#: views/tabs.php:526
 msgid "Medium"
 msgstr ""
 
-#: views/tabs.php:514
+#: views/tabs.php:527
 msgid "Small"
 msgstr ""
 
-#: views/tabs.php:515
+#: views/tabs.php:528
 msgid "Remove Images"
 msgstr ""
 
-#: views/tabs.php:521
+#: views/tabs.php:534
 msgid "Image style"
 msgstr ""
 
-#: views/tabs.php:524
+#: views/tabs.php:537
 msgid "Center/Block"
 msgstr ""
 
-#: views/tabs.php:525
+#: views/tabs.php:538
 msgid "Align Right"
 msgstr ""
 
-#: views/tabs.php:526
+#: views/tabs.php:539
 msgid "Align Left"
 msgstr ""
 
-#: views/tabs.php:527
+#: views/tabs.php:540
 msgid "Align None"
 msgstr ""
 
-#: views/tabs.php:544
+#: views/tabs.php:556
 msgid "PDF"
 msgstr ""
 
-#: views/tabs.php:550
+#: views/tabs.php:562
 msgid "Developer Note"
 msgstr ""
 
-#: views/tabs.php:550
+#: views/tabs.php:562
 msgid "On localhost the images can not be included in the PDF. Once the website is live/public images will be included in the PDF."
 msgstr ""
 
-#: views/tabs.php:555
+#: views/tabs.php:567
 msgid "Print"
 msgstr ""
 
-#: views/tabs.php:570
+#: views/tabs.php:582
 msgid "Custom CSS"
 msgstr ""
 
-#: views/tabs.php:577
+#: views/tabs.php:596
+msgid "Include Via"
+msgstr ""
+
+#: views/tabs.php:599
+msgid "Inline Tag"
+msgstr ""
+
+#: views/tabs.php:600
+msgid "File"
+msgstr ""
+
+#: views/tabs.php:609
 msgid "Custom CSS URL"
 msgstr ""
 
-#: views/tabs.php:592
-msgid "Customize the styles of the printed/pdf page using your own CSS. Create your custom CSS, and put the URL to your Custom CSS file in the box above"
-msgstr ""
-
-#: views/tabs.php:594
-msgid "Customize the styles of the printed/pdf page using your own CSS. Add your custom CSS (without the %s tags) in the box above"
-msgstr ""
-
-#: views/tabs.php:619
+#: views/tabs.php:645
 msgid "Debug options"
 msgstr ""
 
-#: views/tabs.php:628
+#: views/tabs.php:654
 msgid "Currently in Debug Mode. This tab is visible in debug mode only"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Font family name"
-msgid "System Font"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Font family name"
-msgid "Source Serif Pro"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Color name"
-msgid "Foreground"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Color name"
-msgid "Background"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Color name"
-msgid "Primary"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Color name"
-msgid "Secondary"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Color name"
-msgid "Tertiary"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Gradient name"
-msgid "Vertical secondary to tertiary"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Gradient name"
-msgid "Vertical secondary to background"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Gradient name"
-msgid "Vertical tertiary to background"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Gradient name"
-msgid "Diagonal primary to foreground"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Gradient name"
-msgid "Diagonal secondary to background"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Gradient name"
-msgid "Diagonal background to secondary"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Gradient name"
-msgid "Diagonal tertiary to background"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Gradient name"
-msgid "Diagonal background to tertiary"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Duotone name"
-msgid "Foreground and background"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Duotone name"
-msgid "Foreground and secondary"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Duotone name"
-msgid "Foreground and tertiary"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Duotone name"
-msgid "Primary and background"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Duotone name"
-msgid "Primary and secondary"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Duotone name"
-msgid "Primary and tertiary"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Custom template name"
-msgid "Blank"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Custom template name"
-msgid "Page (Large Header)"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Custom template name"
-msgid "Single Post (No Separators)"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Custom template name"
-msgid "Page (No Separators)"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Template part name"
-msgid "Header"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Template part name"
-msgid "Header (Dark, large)"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Template part name"
-msgid "Header (Dark, small)"
-msgstr ""
-
-#: wp-content/themes/twentytwentytwo/theme.json
-msgctxt "Template part name"
-msgid "Footer"
 msgstr ""

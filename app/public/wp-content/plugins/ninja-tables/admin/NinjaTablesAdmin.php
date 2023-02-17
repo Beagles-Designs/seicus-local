@@ -1741,7 +1741,7 @@ class NinjaTablesAdmin
         $plugin = [
             'name'      => 'Ninja Charts',
             'repo-slug' => 'ninja-charts',
-            'file'      => 'ninja-charts.php',
+            'file'      => 'plugin.php',
             'redirect'  => self_admin_url('admin.php?page=ninja-charts#/chart-list')
         ];
 

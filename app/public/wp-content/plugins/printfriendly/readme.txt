@@ -2,8 +2,8 @@
 Contributors: printfriendly, joostdevalk, jrf, rozroz
 Tags: print, pdf, email, woocommerce print, woocommerce pdf, print plugin, print button, pdf plugin, pdf button
 Requires at least: 4.9
-Tested up to: 6.0
-Stable tag: 5.2.5
+Tested up to: 6.1.1
+Stable tag: 5.4.0
 
 
 The #1 Print, PDF, Email button. Stylish, full featured, customizable. Add custom header, footer, and more.
@@ -140,6 +140,13 @@ Use the option in the Plugin settings. [See how](https://support.printfriendly.c
 
 
 == Changelog ==
+
+= 5.4.0 =
+* Fix restricting of button to categories when more than one category is selected
+
+= 5.3.0 =
+* Support custom CSS via inline tag enabling localhost/internal server support
+
 
 = 5.2.5 =
 * Use defer instead of async while loading script for reliable parsing of options

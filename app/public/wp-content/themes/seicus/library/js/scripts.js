@@ -404,6 +404,7 @@ $( ".search-button" ).click(function() {
 });
 
 
+
 }); /* end of as page load scripts */
 
 /*! A fix for the iOS orientationchange zoom bug.
@@ -440,3 +441,43 @@ $( ".search-button" ).click(function() {
 	w.addEventListener( "orientationchange", restoreZoom, false );
 	w.addEventListener( "devicemotion", checkTilt, false );
 })( this );
+
+//Save salsalabs form to localstorage on submit
+
+
+  //Temporary clear local storage while testing
+  const clearButton = document.getElementById('clear-storage');
+  
+  clearButton.addEventListener('click', function() {
+    localStorage.removeItem('formSubmitted');
+    localStorage.removeItem('buttonClicked');
+    console.log('Local storage cleared.');
+  });
+
+
+  // Add click event listener to the rm-btn button
+document.querySelector('.rm-btn').addEventListener('click', function(event) {
+	localStorage.setItem('buttonClicked', 'true');
+	// Check if form has already been submitted
+	if (localStorage.getItem('formSubmitted') === 'true') {
+	  // If form has already been submitted, submit the form through the data-ignite-submit-button attribute
+	  console.log('true');
+	  document.querySelector('[data-ignite-submit-button="data-ignite-submit-button"]').click();
+	} else {
+	  // If form has not been submitted, continue with default button event
+	  console.log('false');
+		console.log(document.querySelector('#TBgxthdEYx formtemplate [data-ignite-submit-button="data-ignite-submit-button"]'));
+	}
+  });
+
+
+  window.addEventListener('load', function() {
+	// code to execute after the popup is fully loaded
+	const button = document.querySelector('.content_button');
+	button.addEventListener('click', function(event) {
+	  // code to execute when the button is clicked
+	  localStorage.setItem('formSubmitted', 'true');
+	});
+  });
+
+

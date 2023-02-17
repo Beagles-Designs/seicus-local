@@ -75,6 +75,7 @@
 			<div class="resource-rm-container">
 				<p>Want to read the full report?<p>
 				<button class="rm-btn">Sign up to read more!</button>
+				<button id="clear-storage">Clear Local Storage</button>
 			</div>
 		<?php endif; ?>
 	</section> <?php // end article section ?>

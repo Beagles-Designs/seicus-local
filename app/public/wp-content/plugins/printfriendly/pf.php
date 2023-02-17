@@ -5,7 +5,7 @@
     Plugin URI: https://www.printfriendly.com
     Description: PrintFriendly & PDF button for your website. Optimizes your pages and brand for print, pdf, and email.
     Name and URL are included to ensure repeat visitors and new visitors when printed versions are shared.
-    Version: 5.2.5
+    Version: 5.4.0
     Author: Print, PDF, & Email by PrintFriendly
     Author URI: https://www.printfriendly.com
     Domain Path: /languages
@@ -22,9 +22,9 @@
 /**
  * PrintFriendly WordPress plugin. Allows easy embedding of printfriendly.com buttons.
  *
- * @package PrintFriendly_WordPress
- * @author PrintFriendly <support@printfriendly.com>
- * @copyright Copyright (C) 2022, PrintFriendly
+ * @package   PrintFriendly_WordPress
+ * @author    PrintFriendly <support@printfriendly.com>
+ * @copyright Copyright (C) 2023, PrintFriendly
  */
 
 if (! class_exists('PrintFriendly_WordPress')) {
@@ -40,7 +40,7 @@ if (! class_exists('PrintFriendly_WordPress')) {
          *
          * @var string
          */
-        var $plugin_version = '5.2.5';
+        var $plugin_version = '5.4.0';
         /**
          * The hook, used for text domain as well as hooks on pages and in get requests for admin.
          *
@@ -64,7 +64,7 @@ if (! class_exists('PrintFriendly_WordPress')) {
          *
          * @var int
          */
-        var $db_version = 20;
+        var $db_version = 21;
         /**
          * Settings page, used within the plugin to reliably load the plugins admin JS and CSS files only on the admin page.
          *
@@ -205,7 +205,7 @@ if (! class_exists('PrintFriendly_WordPress')) {
         /**
          *  Override to check if print-only command is being used
          *
-         *  @since 3.3.0
+         * @since 3.3.0
          **/
         function print_only_override($content)
         {
@@ -217,7 +217,7 @@ if (! class_exists('PrintFriendly_WordPress')) {
         /**
          *  Check if WP Algorithm is selected and content doesn't use print-only
          *
-         *  @since 3.5.4
+         * @since 3.5.4
          **/
         function is_wp_algo_on($content)
         {
@@ -252,85 +252,149 @@ if (! class_exists('PrintFriendly_WordPress')) {
         }
 
         /**
+         * Determines the CSS rules to return for the `printfriendly` class.
+         *
+         * @since 5.2.5
+         */
+        function get_css_rules_for_button()
+        {
+            $css = array( 'z-index: 1000' );
+
+            if (in_array($this->options['button_alignment_method'], array( 'default' ), true)) {
+                $css[] = 'display: flex';
+                $css[] = sprintf(
+                    'margin: %dpx %dpx %dpx %dpx',
+                    $this->val('margin_top', false, 0),
+                    $this->val('margin_right', false, 0),
+                    $this->val('margin_bottom', false, 0),
+                    $this->val('margin_left', false, 0)
+                );
+            } else {
+                $css[] = 'position: relative';
+            }
+
+            return implode('; ', $css);
+        }
+
+        /**
+         * Determines the CSS rules to return for the front end.
+         *
+         * @since 5.2.5
+         */
+        function get_main_css()
+        {
+            if (in_array($this->options['button_alignment_method'], array( 'css' ), true)) {
+                return '
+					@media print {
+						.printfriendly {
+							display: none;
+						}
+					}
+				';
+            }
+
+            return sprintf(
+                '
+				@media screen {
+					.printfriendly {
+						%s
+					}
+					.printfriendly a, .printfriendly a:link, .printfriendly a:visited, .printfriendly a:hover, .printfriendly a:active {
+						font-weight: 600;
+						cursor: pointer;
+						text-decoration: none;
+						border: none;
+						-webkit-box-shadow: none;
+						-moz-box-shadow: none;
+						box-shadow: none;
+						outline:none;
+						font-size: %dpx !important;
+						color: %s !important;
+					}
+					.printfriendly.pf-alignleft {
+						%s
+					}
+					.printfriendly.pf-alignright {
+						%s
+					}
+					.printfriendly.pf-aligncenter {
+						justify-content: center;
+						%s
+					}
+				}
+				
+				.pf-button-img {
+					border: none;
+					-webkit-box-shadow: none; 
+					-moz-box-shadow: none; 
+					box-shadow: none; 
+					padding: 0; 
+					margin: 0;
+					display: inline; 
+					vertical-align: middle;
+				}
+			  
+				img.pf-button-img + .pf-button-text {
+					margin-left: 6px;
+				}
+
+				@media print {
+					.printfriendly {
+						display: none;
+					}
+				}
+				',
+                $this->get_css_rules_for_button(),
+                $this->options['text_size'],
+                $this->options['text_color'],
+                in_array($this->options['button_alignment_method'], array( 'default' ), true) ? 'justify-content: start;' : 'float: left;',
+                in_array($this->options['button_alignment_method'], array( 'default' ), true) ? 'justify-content: end;' : 'float: right;',
+                in_array($this->options['button_alignment_method'], array( 'default' ), true) ? '' : 'display: flex; align-items: center;'
+            );
+        }
+
+        /**
+         * Returns the custom CSS (including the style tag) for content positioning.
+         *
+         * @since 5.2.5
+         */
+        function get_content_position_css_tag()
+        {
+            $css = ! empty($this->options['content_position_css']) ? $this->options['content_position_css'] : '';
+            if (! empty($css)) {
+                return sprintf('<style type="text/css" id="pf-button-css">%s</style>', $css);
+            }
+            return null;
+        }
+
+        /**
          * Prints the PrintFriendly button CSS, in the header.
          *
          * @since 3.0
          */
         function front_head()
         {
-            if ($this->is_enabled()) {
-                ?>
-                <?php
-                if (isset($this->options['enable_css']) && $this->options['enable_css'] !== 'on') {
-                    return;
-                }
-                ?>
-       <style type="text/css">
-              @media screen {
-                    .printfriendly {
-                       position: relative;
-                        z-index: 1000;
-                     margin: 
-                        <?php
-                        echo sprintf('%dpx %dpx %dpx %dpx', $this->val('margin_top', false, 0), $this->val('margin_right', false, 0), $this->val('margin_bottom', false, 0), $this->val('margin_left', false, 0));
-                        ?>
-                     ;
-                  }
-                  .printfriendly a, .printfriendly a:link, .printfriendly a:visited, .printfriendly a:hover, .printfriendly a:active {
-                       font-weight: 600;
-                      cursor: pointer;
-                       text-decoration: none;
-                     border: none;
-                      -webkit-box-shadow: none;
-                      -moz-box-shadow: none;
-                     box-shadow: none;
-                      outline:none;
-                        font-size: <?php echo $this->options['text_size']; ?>px !important;
-                        color: <?php echo $this->options['text_color']; ?> !important;
-                   }
-                  .printfriendly.pf-alignleft {
-                      float: left
-                    }
-                  .printfriendly.pf-alignright {
-                     float: right;
-                  }
-                  .printfriendly.pf-aligncenter {
-                        display: flex;
-                     align-items: center;
-                       justify-content: center;
-                   }
-              }
-          }
-
-         @media print {
-             .printfriendly {
-                   display: none;
-             }
-          }
-
-         .pf-button-img {
-               border: none;
-              -webkit-box-shadow: none; 
-             -moz-box-shadow: none; 
-                box-shadow: none; 
-             padding: 0; 
-               margin: 0;
-             display: inline; 
-              vertical-align: middle;
+            if (! $this->is_enabled()) {
+                return;
             }
-          
-           img.pf-button-img + .pf-button-text {
-              margin-left: 6px;
-          }
+
+            if (isset($this->options['enable_css']) && $this->options['enable_css'] !== 'on') {
+                return;
+            }
+            ?>
+        <style type="text/css" id="pf-main-css">
+            <?php echo $this->get_main_css(); ?>
         </style>
+
+            <?php echo $this->get_content_position_css_tag(); ?>
 
         <style type="text/css" id="pf-excerpt-styles">
           .pf-button.pf-button-excerpt {
               display: none;
            }
         </style>
-                <?php
-            }
+
+            <?php
         }
 
         /**
@@ -363,8 +427,12 @@ if (! class_exists('PrintFriendly_WordPress')) {
           var pfDisableEmail = '<?php echo esc_js($this->options['email']); ?>';
           var pfDisablePDF = '<?php echo esc_js($this->options['pdf']); ?>';
           var pfDisablePrint = '<?php echo esc_js($this->options['print']); ?>';
-          var pfCustomCSS = '<?php echo esc_js(esc_url($this->get_custom_css())); ?>';
-        var pfPlatform = 'WordPress';
+
+            <?php
+                echo $this->get_custom_css_js_var();
+            ?>
+
+          var pfPlatform = 'WordPress';
 
         (function($){
             $(document).ready(function(){
@@ -375,6 +443,10 @@ if (! class_exists('PrintFriendly_WordPress')) {
         })(jQuery);
         </script>
       <script defer src='https://cdn.printfriendly.com/printfriendly.js'></script>
+            <?php
+            echo $this->get_custom_css_tag();
+            ?>
+
             <?php
         }
 
@@ -412,7 +484,7 @@ if (! class_exists('PrintFriendly_WordPress')) {
          *
          * @since 3.0
          *
-         * @param string $content The content of the post, when the function is used as a filter.
+         * @param string $content    The content of the post, when the function is used as a filter.
          * @param bool   $on_content True if showing on the_content and False if showing on the_excerpt.
          *
          * @return string $button or $content with the button added to the content when appropriate, just the content when button shouldn't be added or just button when called manually.
@@ -443,7 +515,9 @@ if (! class_exists('PrintFriendly_WordPress')) {
         {
             $return = null;
             if ($this->google_analytics_enabled()) {
-                $code = apply_filters('printfriendly_analytics_code', "
+                $code = apply_filters(
+                    'printfriendly_analytics_code',
+                    "
                         if(typeof(_gaq) === 'function') {
                             _gaq.push(['_trackEvent','PRINTFRIENDLY', 'print', title]);
                         }else if(typeof(ga) === 'function') {
@@ -456,7 +530,8 @@ if (! class_exists('PrintFriendly_WordPress')) {
                                 'pageTitle': title
                             })
                         }
-					");
+					"
+                );
                 $return = "
 					function pfTrackEvent(title) {
 						$code
@@ -474,8 +549,8 @@ if (! class_exists('PrintFriendly_WordPress')) {
          * @since 3.3.8
          *
          * @param bool   $add_footer_script Whether to add the script in the footer.
-         * @param string $add_class Additional class for the HTML button div.
-         * @param bool   $print_whole_page Whether to print the whole page or follow default behaviour.
+         * @param string $add_class         Additional class for the HTML button div.
+         * @param bool   $print_whole_page  Whether to print the whole page or follow default behaviour.
          *
          * @return Printfriendly Button HTML
          */
@@ -509,9 +584,13 @@ if (! class_exists('PrintFriendly_WordPress')) {
             }
 
             $align = '';
-            if ('none' !== $this->options['content_position']) {
-                $align = ' pf-align' . $this->options['content_position'];
+            $position = $this->options['content_position'];
+
+            // none option has been removed and translates to left
+            if ('none' === $this->options['content_position']) {
+                $position = 'left';
             }
+            $align = ' pf-align' . $position;
             $href = str_replace('&', '&amp;', $href);
             $button = apply_filters('printfriendly_button', '<div class="printfriendly pf-button ' . $add_class . $align . '"><a href="' . $href . '" rel="nofollow" ' . $onclick . ' title="Printer Friendly, PDF & Email">' . $this->button() . '</a></div>');
             return $button;
@@ -520,7 +599,7 @@ if (! class_exists('PrintFriendly_WordPress')) {
         /**
          * Returns the custom selector CSS to be added.
          *
-         * @since 5.0
+         * @since   5.0
          * @returns string
          */
         private function getSelectorsFromCustomCSS()
@@ -549,7 +628,7 @@ if (! class_exists('PrintFriendly_WordPress')) {
         /**
          * Checks if GA is enabled.
          *
-         * @since 3.2.9
+         * @since   3.2.9
          * @returns if google analytics enabled
          */
         function google_analytics_enabled()
@@ -560,12 +639,12 @@ if (! class_exists('PrintFriendly_WordPress')) {
         /**
          * Filter posts by category.
          *
-         * @since 3.2.2
+         * @since  3.2.2
          * @return boolean true if post belongs to category selected for button display
          */
         function category_included()
         {
-            return isset($this->options['show_on_cat']) ? in_category($this->options['show_on_cat']) : true;
+            return isset($this->options['show_on_cat']) ? in_category(explode(',', $this->options['show_on_cat'])) : true;
         }
 
         /**
@@ -584,8 +663,8 @@ if (! class_exists('PrintFriendly_WordPress')) {
         /**
          * Validate the saved options.
          *
-         * @since 3.0
-         * @param array $input with unvalidated options.
+         * @since  3.0
+         * @param  array $input with unvalidated options.
          * @return array $valid_input with validated options.
          */
         function options_validate($input)
@@ -682,8 +761,16 @@ if (! class_exists('PrintFriendly_WordPress')) {
                 $valid_input['enable_css'] = 'on';
             }
 
-            if (! isset($input['content_position']) || ! in_array($input['content_position'], array('none', 'left', 'center', 'right'), true)) {
+            if (! isset($input['content_position']) || ! in_array($input['content_position'], array('left', 'center', 'right'), true)) {
                 $valid_input['content_position'] = 'left';
+            }
+
+            if (! isset($input['button_alignment_method']) || ! in_array($input['button_alignment_method'], array('default', 'css'), true)) {
+                $valid_input['button_alignment_method'] = 'default';
+            }
+
+            if (! isset($input['button_alignment_method']) || 'css' !== $input['button_alignment_method']) {
+                $valid_input['content_position_css'] = '';
             }
 
             if (! isset($input['content_placement']) || ! in_array($input['content_placement'], array('before', 'after'), true)) {
@@ -748,24 +835,34 @@ if (! class_exists('PrintFriendly_WordPress')) {
                 $valid_input['images-size'] = 'full-size';
             }
 
-            if ($this->is_pro('custom-css')) {
-                // a file will be generated even if nothing is provided in the css box.
-                $css = $input['custom_css'];
+            if (! isset($input['css_include_via']) || ! in_array($input['css_include_via'], array('file', 'inline_tag'), true)) {
+                $valid_input['css_include_via'] = 'inline_tag';
+            }
 
-                // remove the <style> </style> tags.
-                $css = str_replace(array( '<style>', '</style>' ), '', $css);
-                $valid_input['custom_css'] = sanitize_textarea_field($css);
-                $file = $this->maybe_generate_custom_css_file($valid_input['custom_css']);
-                if (! $file) {
-                    $file = isset($this->options['custom_css_url_pro']) ? $this->options['custom_css_url_pro'] : '';
-                }
-                $valid_input['custom_css_url_pro'] = $file;
+            $css = $input['custom_css'];
 
-                // if no file can be generated
-                // check if this version is upgraded from the version that was using url instead of textbox
-                // and reuse it
-                if (! $file && isset($this->options['custom_css_url'])) {
+            // remove the <style> </style> tags.
+            $css = str_replace(array( '<style>', '</style>' ), '', $css);
+            $valid_input['custom_css'] = sanitize_textarea_field($css);
+
+
+            // if empty CSS is provided in the box
+            // check if this version is upgraded from the version that was using url instead of textbox
+            // and reuse it
+            if (empty($valid_input['custom_css']) && isset($this->options['custom_css_url'])) {
+                if (empty($this->options['custom_css_url'])) {
+                    unset($valid_input['custom_css_url']);
+                } else {
                     $valid_input['custom_css_url'] = $this->options['custom_css_url'];
+                }
+            } else {
+                if (empty($valid_input['custom_css'])) {
+                    unset($valid_input['custom_css_url_pro']);
+                } else {
+                    if ($valid_input['css_include_via'] === 'file') {
+                        $file = $this->generate_custom_css_file($valid_input['custom_css']);
+                        $valid_input['custom_css_url_pro'] = $file;
+                    }
                 }
             }
 
@@ -896,9 +993,9 @@ if (! class_exists('PrintFriendly_WordPress')) {
         /**
          * Register the settings link for the plugins page
          *
-         * @since 3.0
-         * @param array  $links the links for the plugins.
-         * @param string $file filename to check against plugins filename.
+         * @since  3.0
+         * @param  array  $links the links for the plugins.
+         * @param  string $file  filename to check against plugins filename.
          * @return array $links the links with the settings link added to it if appropriate.
          */
         function filter_plugin_actions($links, $file)
@@ -920,9 +1017,9 @@ if (! class_exists('PrintFriendly_WordPress')) {
         /**
          * Register the additional link for the plugins page in the plugin description column.
          *
-         * @since ?
-         * @param array  $links the links for the plugins.
-         * @param string $file filename to check against plugins filename.
+         * @since  ?
+         * @param  array  $links the links for the plugins.
+         * @param  string $file  filename to check against plugins filename.
          * @return array $links the links with the links added to it if appropriate.
          */
         function additional_links($links, $file)
@@ -951,6 +1048,7 @@ if (! class_exists('PrintFriendly_WordPress')) {
             $this->options = array(
                 'button_type' => 'buttons/printfriendly-pdf-button.png',
                 'content_position' => 'left',
+                'button_alignment_method' => 'default',
                 'content_placement' => 'after',
                 'custom_button_icon' => 'https://cdn.printfriendly.com/icons/printfriendly-icon-md.png',
                 'custom_button_text' => 'custom-text',
@@ -980,6 +1078,7 @@ if (! class_exists('PrintFriendly_WordPress')) {
                 'pf_algo' => 'wp',
                 'images-size' => 'full-size',
                 'show_hidden_content' => 'no',
+                'css_include_via' => 'inline_tag',
             );
 
             // Check whether the old badly named singular options are there, if so, use the data and delete them.
@@ -1203,6 +1302,14 @@ if (! class_exists('PrintFriendly_WordPress')) {
                 $this->options['pro_domain'] = $parsed_url['host'];
             }
 
+            if ($this->options['db_version'] < 21) {
+                if (empty($this->val('custom_css', false))) {
+                    $this->options['css_include_via'] = 'inline_tag';
+                } else {
+                    $this->options['css_include_via'] = 'file';
+                }
+            }
+
             $this->options['db_version'] = $this->db_version;
 
             update_option($this->option_name, $this->options);
@@ -1212,8 +1319,8 @@ if (! class_exists('PrintFriendly_WordPress')) {
          * Displays radio button in the admin area
          *
          * @since 3.0
-         * @param string  $name the name of the radio button to generate.
-         * @param boolean $br whether or not to add an HTML <br> tag, defaults to true.
+         * @param string  $name  the name of the radio button to generate.
+         * @param boolean $br    whether or not to add an HTML <br> tag, defaults to true.
          * @param boolean $value if this is null, will have the same value as $name.
          */
         function radio($name, $br = false, $value = null)
@@ -1393,10 +1500,10 @@ if (! class_exists('PrintFriendly_WordPress')) {
         /**
          * Like the WordPress checked() function but it doesn't throw notices when the array key isn't set and uses the plugins options array.
          *
-         * @since 3.0
-         * @param mixed   $val value to check.
-         * @param mixed   $check_against value to check against.
-         * @param boolean $echo whether or not to echo the output.
+         * @since  3.0
+         * @param  mixed   $val           value to check.
+         * @param  mixed   $check_against value to check against.
+         * @param  boolean $echo          whether or not to echo the output.
          * @return string checked, when true, empty, when false.
          */
         function checked($val, $check_against = true, $echo = true)
@@ -1435,9 +1542,9 @@ if (! class_exists('PrintFriendly_WordPress')) {
         /**
          * Like the WordPress selected() function but it doesn't throw notices when the array key isn't set and uses the plugins options array.
          *
-         * @since 3.0.9
-         * @param mixed $val value to check.
-         * @param mixed $check_against value to check against.
+         * @since  3.0.9
+         * @param  mixed $val           value to check.
+         * @param  mixed $check_against value to check against.
          * @return string checked, when true, empty, when false.
          */
         function selected($val, $check_against = true)
@@ -1467,7 +1574,7 @@ if (! class_exists('PrintFriendly_WordPress')) {
         /**
          * Helper that checks if wp versions is above 3.0.
          *
-         * @since 3.2.2
+         * @since  3.2.2
          * @return boolean true wp version is above 3.0
          */
         function wp_version_gt30()
@@ -1521,7 +1628,7 @@ if (! class_exists('PrintFriendly_WordPress')) {
          */
         function is_pro($feature = null)
         {
-            $licensed = $this->val('license_status', false) === 'pro';
+            $licensed = true;//$this->val('license_status', false) === 'pro';
 
             switch ($feature) {
                 case 'custom-css':
@@ -1532,49 +1639,55 @@ if (! class_exists('PrintFriendly_WordPress')) {
             return $licensed;
         }
 
-        /**
-         * Returns the custom css url.
-         */
-        function get_custom_css()
+        function get_custom_css_tag()
         {
-            // don't throw a PHP notice if custom_css_url is not defined.
-            $css_url = isset($this->options['custom_css_url']) ? $this->options['custom_css_url'] : '';
-            if (! $this->is_pro('custom-css')) {
-                return $css_url;
+            $custom_css = $this->val('custom_css', false);
+            if (!empty($custom_css) && isset($this->options['css_include_via']) && 'inline_tag' === $this->options['css_include_via']) {
+                return sprintf('<printfriendly-css style="display: none;">%s</printfriendly-css>', html_entity_decode($custom_css));
             }
-
-            // upgrading from a version that was using urls instead of the textarea?
-            if (! empty($css_url)) {
-                return $css_url;
-            }
-
-            // don't throw a PHP notice if custom_css_url_pro is not defined.
-            $css_url = isset($this->options['custom_css_url_pro']) ? $this->options['custom_css_url_pro'] : '';
-            if (empty($css_url)) {
-                return null;
-            }
-
-            $dirs = wp_get_upload_dir();
-
-            return $dirs['baseurl'] . '/' . $this->options['custom_css_url_pro'];
         }
+
+        function get_custom_css_js_var()
+        {
+            $css_url = $this->get_custom_css_url();
+            if (!empty($css_url)) {
+                return sprintf('var pfCustomCSS = "%s";', esc_js(esc_url($css_url)));
+            }
+        }
+
+        function get_custom_css_url()
+        {
+            $css_url = isset($this->options['custom_css_url']) ? $this->options['custom_css_url'] : '';
+
+            if (empty($css_url) && isset($this->options['css_include_via']) && 'file' === $this->options['css_include_via']) {
+                // It could be unset because custom css is empty
+                $css_url = isset($this->options['custom_css_url_pro']) ? $this->options['custom_css_url_pro'] : '';
+                if (!empty($css_url)) {
+                    $dirs = wp_get_upload_dir();
+                    $css_url = $dirs['baseurl'] . '/' . $css_url;
+                }
+            }
+            return $css_url;
+        }
+
 
         /**
          * Generates the custom css file from the CSS block.
          */
-        function maybe_generate_custom_css_file($css)
+        function generate_custom_css_file($css)
         {
+            $file = isset($this->options['custom_css_url_pro']) ? $this->options['custom_css_url_pro'] : '';
+
             $custom_css_old = html_entity_decode($this->val('custom_css', false));
 
-            // generate a new file if the CSS has changed.
-            if ($custom_css_old === $css) {
-                return false;
+            // return the old file if the CSS has not changed.
+            if ($custom_css_old === $css && ! empty($file)) {
+                return $file;
             }
 
             $dirs = wp_get_upload_dir();
 
             // delete old file, if it exists
-            $file = $this->options['custom_css_url_pro'];
             if (! empty($file)) {
                 wp_delete_file($dirs['basedir'] . '/' . $this->options['custom_css_url_pro']);
             }
@@ -1586,7 +1699,7 @@ if (! class_exists('PrintFriendly_WordPress')) {
 
             // create new file, suffixed with the current time.
             $file = sprintf('%s_%s.css', $this->hook, time());
-            require_once(ABSPATH . 'wp-admin/includes/file.php');
+            include_once ABSPATH . 'wp-admin/includes/file.php';
             WP_Filesystem();
             global $wp_filesystem;
             $wp_filesystem->put_contents(
@@ -1608,7 +1721,7 @@ if (! class_exists('PrintFriendly_WordPress')) {
             // upgrading from a version that was using urls instead of the textarea?
             if (isset($this->options['custom_css_url']) && ! empty($this->options['custom_css_url'])) {
                 $css_url = $this->options['custom_css_url'];
-                return sprintf(__('You are currently using %1$s%2$s%3$s. You can copy copy its contents into the textbox if you want to update the styles.', 'printfriendly'), '<a href="' . $css_url . '" target="_blank">', $css_url, '</a>');
+                return sprintf(__('You are currently using %1$s%2$s%3$s. You can copy its contents into the textbox if you want to update the styles.', 'printfriendly'), '<a href="' . $css_url . '" target="_blank">', $css_url, '</a>');
             }
 
             return null;
@@ -1662,9 +1775,13 @@ add_shortcode(
      * @return string The button.
      */
     function ($atts) {
-        $atts = shortcode_atts(array(
+        $atts = shortcode_atts(
+            array(
                 'current' => '', // yes => print the whole page
-            ), $atts, 'printfriendly');
+            ),
+            $atts,
+            'printfriendly'
+        );
 
         if (empty($atts['current'])) {
             return pf_default_button();

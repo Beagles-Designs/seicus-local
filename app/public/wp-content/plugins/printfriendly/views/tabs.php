@@ -250,18 +250,6 @@
 
                         <div class="pf-bu-card-content pf-features">
                             <div class="pf-label-inline">
-                                <label for="pf_content_position" class="pf-bu-label"><?php _e('Alignment', 'printfriendly'); ?></label>
-                                <div>
-                                    <select class="pf-bu-select" id="pf_content_position" name="<?php echo $this->option_name; ?>[content_position]">
-                                        <option value="left" <?php selected($this->options['content_position'], 'left'); ?>><?php _e('Left Align', 'printfriendly'); ?></option>
-                                        <option value="right" <?php selected($this->options['content_position'], 'right'); ?>><?php _e('Right Align', 'printfriendly'); ?></option>
-                                        <option value="center" <?php selected($this->options['content_position'], 'center'); ?>><?php _e('Center', 'printfriendly'); ?></option>
-                                        <option value="none" <?php selected($this->options['content_position'], 'none'); ?>><?php _e('None', 'printfriendly'); ?></option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="pf-label-inline">
                                 <label for="pf_content_placement" class="pf-bu-label"><?php _e('Placement', 'printfriendly'); ?></label>
                                 <div>
                                     <select class="pf-bu-select" id="pf_content_placement" name="<?php echo $this->option_name; ?>[content_placement]">
@@ -270,6 +258,36 @@
                                     </select>
                                 </div>
                             </div>
+
+                            <div class="pf-label-inline">
+                                <label for="pf_button_alignment_method" class="pf-bu-label"><?php _e('Alignment Method', 'printfriendly'); ?></label>
+                                <div>
+                                    <select class="pf-bu-select" id="pf_button_alignment_method" name="<?php echo $this->option_name; ?>[button_alignment_method]">
+                                        <option value="default" <?php selected($this->options['button_alignment_method'], 'default'); ?>><?php _e('Default', 'printfriendly'); ?></option>
+                                        <option value="css" <?php selected($this->options['button_alignment_method'], 'css'); ?>><?php _e('CSS', 'printfriendly'); ?></option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="pf-label-inline" id="pf-content-position">
+                                <label for="pf_content_position" class="pf-bu-label"><?php _e('Alignment', 'printfriendly'); ?></label>
+                                <div>
+                                    <select class="pf-bu-select" id="pf_content_position" name="<?php echo $this->option_name; ?>[content_position]">
+                                        <option value="left" <?php selected($this->options['content_position'], 'left'); ?>><?php _e('Left Align', 'printfriendly'); ?></option>
+                                        <option value="right" <?php selected($this->options['content_position'], 'right'); ?>><?php _e('Right Align', 'printfriendly'); ?></option>
+                                        <option value="center" <?php selected($this->options['content_position'], 'center'); ?>><?php _e('Center', 'printfriendly'); ?></option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="pf-label-inline" id="pf-content-position-css">
+                                <label for="pf_content_position_css" class="pf-bu-label"><?php _e('CSS', 'printfriendly'); ?></label>
+                                <div>
+                                    <textarea id="pf_content_position_css" rows="5" cols="80" name="<?php echo $this->option_name; ?>[content_position_css]"><?php echo esc_textarea($this->options['content_position_css']); ?></textarea>
+                                    <p>Add your custom CSS (without the <code style="display:inline;padding:3px 2px">&lt;style&gt;</code> tags) in the box above.</p>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -286,12 +304,12 @@
                                 <?php $this->create_checkbox('posts', __('Posts', 'printfriendly')); ?>
                                 <?php $this->create_checkbox('pages', __('Pages', 'printfriendly')); ?>
                                 <?php $this->create_checkbox('homepage', __('Homepage', 'printfriendly')); ?>
-                                <?php $this->create_checkbox('categories', __('Category Pages', 'printfriendly')); ?>
-                                <?php $this->create_checkbox('taxonomies', __('Taxonomy Pages', 'printfriendly')); ?>
+                                <?php $this->create_checkbox('categories', __('Category Index Pages', 'printfriendly')); ?>
+                                <?php $this->create_checkbox('taxonomies', __('Taxonomy Index Pages', 'printfriendly')); ?>
                             </div>
 
                             <hr/>
-                            <label for="categories" class="pf-bu-label"><?php _e('Specific categories to show on', 'printfriendly'); ?></label>
+                            <label for="categories" class="pf-bu-label"><?php _e('Restrict to specific categories', 'printfriendly'); ?></label>
                             <?php
                                 wp_dropdown_categories(
                                     apply_filters(
@@ -398,7 +416,7 @@
                     <div class="pf-bu-container">
                         <div class="pf-bu-is-flex pf-bu-is-justify-content-center">
                             <input type="submit" class="button-primary pf-bu-is-medium pf-bu-button" value="<?php esc_attr_e('Save Options', 'printfriendly'); ?>" />
-                            <input type="reset" class="button-secondary pf-bu-is-medium pf-bu-button" value="<?php esc_attr_e('Cancel', 'printfriendly'); ?>" />
+                            <input type="reset" style="margin-left: 10px" class="button-secondary pf-bu-is-medium pf-bu-button" value="<?php esc_attr_e('Cancel', 'printfriendly'); ?>" />
                         </div>
                     </div>
                 </div>
@@ -565,16 +583,31 @@
                             </p>
                         </header>
 
-                        <div class="pf-bu-card-content">
-                            <?php if (! $this->is_pro('custom-css')) { ?>
+                        <div class="pf-bu-card-content pf-features">
+                            <?php if ($this->is_pro('custom-css')) { ?>
+                                <div class="pf-label-inline">
+                                    <label for="custom_css" class="pf-bu-label"><?php _e('CSS', 'printfriendly'); ?></label>
+                                    <div>
+                                        <textarea id="custom_css" class="regular-text pf-bu-textarea" rows="5" cols="80" name="<?php echo $this->option_name; ?>[custom_css]"><?php echo html_entity_decode(esc_textarea($this->val('custom_css', false))); ?></textarea>
+                                        <p class="desc"><?php echo $this->get_custom_css_upgrade_message(); ?></p>
+                                    </div>
+                                </div>
+                                <div class="pf-label-inline" style="margin-top: 30px">
+                                    <label for="css_include_via" class="pf-bu-label"><?php _e('Include Via', 'printfriendly'); ?></label>
+                                    <div>
+                                        <select class="pf-bu-select" name="<?php echo $this->option_name; ?>[css_include_via]" id="css_include_via">
+                                            <option value="inline_tag" <?php selected($this->options['css_include_via'], 'inline_tag'); ?>><?php _e('Inline Tag', 'printfriendly'); ?></option>
+                                            <option value="file" <?php selected($this->options['css_include_via'], 'file'); ?>><?php _e('File', 'printfriendly'); ?></option>
+                                        </select>
+                                        <?php if ($this->val('css_include_via', false) == 'file') { ?>
+                                        <p class="desc pf-bu-has-background-warning-light pf-bu-py-1 pf-bu-px-2">We recommend setting this to Inline Tag</p>
+                                        <?php } ?>
+                                    </div>
+                                </div>
+                            <?php } else { ?>
                                 <label for="custom_css_url">
                                   <?php _e('Custom CSS URL', 'printfriendly'); ?>
                                   <input id="custom_css_url" type="url" class="regular-text" name="<?php echo $this->option_name; ?>[custom_css_url]" value="<?php $this->val('custom_css_url'); ?>" />
-                                </label>
-                            <?php } else { ?>
-                                <label for="custom_css">
-                                  <textarea id="custom_css" class="regular-text pf-bu-textarea" rows="5" cols="80" name="<?php echo $this->option_name; ?>[custom_css]"><?php echo html_entity_decode(esc_textarea($this->val('custom_css', false))); ?></textarea>
-                                  <p class="desc"><?php echo $this->get_custom_css_upgrade_message(); ?></p>
                                 </label>
                             <?php } ?>
                         </div>
@@ -595,7 +628,7 @@
                     <div class="pf-bu-container">
                         <div class="pf-bu-is-flex pf-bu-is-justify-content-center">
                             <input type="submit" class="button-primary pf-bu-is-medium pf-bu-button" value="<?php esc_attr_e('Save Options', 'printfriendly'); ?>" />
-                            <input type="reset" class="button-secondary pf-bu-is-medium pf-bu-button" value="<?php esc_attr_e('Cancel', 'printfriendly'); ?>" />
+                            <input type="reset" style="margin-left: 10px" class="button-secondary pf-bu-is-medium pf-bu-button" value="<?php esc_attr_e('Cancel', 'printfriendly'); ?>" />
                         </div>
                     </div>
 

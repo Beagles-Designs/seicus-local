@@ -40,6 +40,32 @@
         initCategories();
 
         initCustomCssSelectors();
+
+        initPositioning();
+    }
+
+    function initPositioning() {
+        // on load
+        togglePositioning($('#pf_button_alignment_method'));
+
+        // on change
+        $('#pf_button_alignment_method').on('change', function(e){
+            togglePositioning($(this));
+        });
+    }
+
+    function togglePositioning(dropdown) {
+        var button_alignment_method = $(dropdown).val();
+        switch(button_alignment_method) {
+            case 'default':
+                $('#pf-content-position').show();
+                $('#pf-content-position-css').hide();
+                break;
+            case 'css':
+                $('#pf-content-position').hide();
+                $('#pf-content-position-css').show();
+                break;
+        }
     }
 
     function initCategories() {

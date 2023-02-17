@@ -64,6 +64,8 @@ class NinjaFooTable
                 'search_in'  => __('Search in', 'ninja-tables'),
                 'search'     => __('Search', 'ninja-tables'),
                 'empty_text' => __('No Result Found', 'ninja-tables'),
+                'clear_all'  => __('Clear All', 'ninja-tables'),
+                'caption_format'   => __('Selected', 'ninja-tables'),
             ),
             'ninja_table_public_nonce' => wp_create_nonce('ninja_table_public_nonce')
         );
@@ -265,6 +267,10 @@ class NinjaFooTable
                 $formatted_column['formatString'] = $column['dateFormat'] ?: 'MM/DD/YYYY';
                 $formatted_column['showTime'] = isset($column['showTime']) && $column['showTime'] === 'yes';
                 $formatted_column['firstDayOfWeek'] = isset($column['firstDayOfWeek']) && $column['firstDayOfWeek'] ? $column['firstDayOfWeek'] : 0;
+
+               if ($formatted_column['showTime'] && isset($column['timeFormat']) && $column['timeFormat']) {
+                    $formatted_column['formatString'] .= ' '.$column['timeFormat'];
+                }
             }
             if ($sortingType == 'by_column' && $column['key'] == ArrayHelper::get($settings, 'sorting_column')) {
                 $formatted_column['sorted'] = true;

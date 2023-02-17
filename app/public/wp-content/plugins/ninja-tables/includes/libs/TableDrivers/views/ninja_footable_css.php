@@ -82,8 +82,8 @@ $cell = maybe_unserialize($cellStyle->settings);
 $cellPrefix = $css_prefix.'.ninja_footable.ninja_table_pro tbody tr.nt_row_id_'.$cellStyle->id;
 ?>
 <?php echo esc_attr($cellPrefix)?> {
-<?php if(@$cell['row_bg']): ?>background: <?php echo esc_attr($cell['row_bg'].'!important;'); endif; ?>
-<?php if(@$cell['text_color']): ?>color: <?php echo esc_attr($cell['text_color'].'!important;'); endif; ?>}
+<?php if(isset($cell['row_bg'])): ?>background: <?php echo esc_attr($cell['row_bg'].'!important;'); endif; ?>
+<?php if(isset($cell['text_color'])): ?>color: <?php echo esc_attr($cell['text_color'].'!important;'); endif; ?>}
 <?php if($cell && isset($cell['cell']) && is_array($cell['cell'])) : foreach ($cell['cell'] as $cell_key => $values): ?>
 <?php $specCellPrefix = $cellPrefix.' .ninja_clmn_nm_'.$cell_key; ?>
 <?php echo esc_attr($specCellPrefix) ?> {

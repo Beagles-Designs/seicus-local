@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Ninja Tables &#8211; Best WP Data Table Plugin for WordPress - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-01 13:03+0000\n"
+"PO-Revision-Date: 2023-01-12 06:40+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,213 +17,319 @@ msgstr ""
 "Language-Team: Spanish\n"
 "X-Loco-Version: 2.2.2; wp-5.2.2"
 
-#: admin/NinjaTablesAdmin.php:560 svn/trunk/admin/NinjaTablesAdmin.php:560
+#: admin/NinjaTablesAdmin.php:566
 msgid " successfully."
 msgstr "exitosamente."
 
-#: admin/NinjaTablesAdmin.php:185 svn/trunk/admin/NinjaTablesAdmin.php:185
+#: admin/NinjaTablesAdmin.php:185
 msgid "<span style=\"color:#f39c12;\">Get Pro</span>"
 msgstr "<span style=\"color:#f39c12;\">Obtener Pro</span>"
 
-#: includes/I18nStrings.php:36 svn/trunk/includes/I18nStrings.php:36
+#: admin/table-builder/config/setting.php:112
+msgid "Accessibility"
+msgstr ""
+
+#: includes/I18nStrings.php:36
 msgid "Activate Ninja Tables Pro"
 msgstr "Activar Tablas Ninja Pro"
 
-#: includes/I18nStrings.php:29 svn/trunk/includes/I18nStrings.php:29
+#: includes/I18nStrings.php:29
 msgid "Activate Ninja Tables Pro Add-on plugin to unlock this feature"
 msgstr ""
 "Activar Tablas Ninja Pro Add-on plugin para desbloquear esta característica"
 
-#: includes/I18nStrings.php:51 svn/trunk/includes/I18nStrings.php:51
+#: includes/I18nStrings.php:51
 msgid "Add"
 msgstr "Agregar"
 
-#: admin/NinjaTablesAdmin.php:177 svn/trunk/admin/NinjaTablesAdmin.php:177
+#: admin/NinjaTablesAdmin.php:177
 msgid "Add Chart"
 msgstr ""
 
-#: includes/I18nStrings.php:72 svn/trunk/includes/I18nStrings.php:72
+#: includes/I18nStrings.php:72
 msgid "Add Column"
 msgstr "Añadir columna"
 
-#: includes/I18nStrings.php:49 svn/trunk/includes/I18nStrings.php:49
+#: includes/I18nStrings.php:49
 msgid "Add Data"
 msgstr "Agregar datos"
 
 #: includes/I18nStrings.php:13 admin/NinjaTablesAdmin.php:88
-#: svn/trunk/includes/I18nStrings.php:13
-#: svn/trunk/admin/NinjaTablesAdmin.php:88
 msgid "Add New Table"
 msgstr "Agregar nueva Tabla"
 
 #: includes/I18nStrings.php:11 admin/NinjaTablesAdmin.php:87
-#: svn/trunk/includes/I18nStrings.php:11
-#: svn/trunk/admin/NinjaTablesAdmin.php:87
 msgid "Add Table"
 msgstr "Agregar Tabla"
 
-#: includes/I18nStrings.php:99 svn/trunk/includes/I18nStrings.php:99
+#: includes/I18nStrings.php:99
 msgid "Additional CSS"
 msgstr "CSS adicional"
 
-#: includes/I18nStrings.php:10 admin/NinjaTablesAdmin.php:1635
-#: svn/trunk/includes/I18nStrings.php:10
-#: svn/trunk/admin/NinjaTablesAdmin.php:1643
+#: admin/table-builder/config/component.php:159
+msgid "Advanced"
+msgstr ""
+
+#: includes/I18nStrings.php:10 admin/NinjaTablesAdmin.php:1678
 msgid "All Tables"
 msgstr "Todas las Tablas"
 
-#: includes/I18nStrings.php:62 svn/trunk/includes/I18nStrings.php:62
+#: includes/I18nStrings.php:62
 msgid "Always show in all devices"
 msgstr "Mostrar siempre en todos los dispositivos."
 
-#: includes/I18nStrings.php:48 svn/trunk/includes/I18nStrings.php:48
+#: includes/I18nStrings.php:48
 msgid "Apply"
 msgstr "Aplicar"
 
-#: includes/I18nStrings.php:56 svn/trunk/includes/I18nStrings.php:56
+#: admin/table-builder/config/setting.php:159
+msgid "Apply Inner Border"
+msgstr ""
+
+#: includes/I18nStrings.php:56
 msgid "Are you sure to delete this?"
 msgstr "¿Estás seguro de eliminar esto?"
 
-#: includes/I18nStrings.php:71 svn/trunk/includes/I18nStrings.php:71
+#: includes/I18nStrings.php:71
 msgid "Available Columns"
 msgstr "Columnas disponibles"
 
-#: includes/I18nStrings.php:46 svn/trunk/includes/I18nStrings.php:46
+#: admin/table-builder/config/setting.php:73
+msgid "Background"
+msgstr ""
+
+#: admin/table-builder/config/setting.php:142
+msgid "Border"
+msgstr ""
+
+#: admin/table-builder/config/setting.php:154
+msgid "Border Color"
+msgstr ""
+
+#: includes/I18nStrings.php:46
 msgid "Bulk Actions"
 msgstr "Acciones masivas"
 
-#: includes/I18nStrings.php:50 svn/trunk/includes/I18nStrings.php:50
+#: admin/table-builder/config/component.php:31
+msgid "Button"
+msgstr ""
+
+#: includes/I18nStrings.php:50
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: includes/I18nStrings.php:57 svn/trunk/includes/I18nStrings.php:57
+#: includes/I18nStrings.php:57
 msgid "cancel"
 msgstr "cancelar"
 
+#: admin/table-builder/config/responsive.php:147
+#: admin/table-builder/config/responsive.php:163
+#: admin/table-builder/config/setting.php:10
+msgid "Cell Padding"
+msgstr ""
+
+#: admin/table-builder/config/responsive.php:32
+#: admin/table-builder/config/responsive.php:79
+msgid "Cell Stack Direction"
+msgstr ""
+
 #: admin/NinjaTablesAdmin.php:165 admin/NinjaTablesAdmin.php:171
-#: svn/trunk/admin/NinjaTablesAdmin.php:165
-#: svn/trunk/admin/NinjaTablesAdmin.php:171
 msgid "Charts"
 msgstr ""
 
-#: includes/I18nStrings.php:30 svn/trunk/includes/I18nStrings.php:30
+#: includes/I18nStrings.php:30
 msgid "Check all"
 msgstr "Marque todo"
 
-#: includes/I18nStrings.php:54 svn/trunk/includes/I18nStrings.php:54
+#: includes/libs/TableDrivers/NinjaFooTable.php:67
+msgid "Clear All"
+msgstr "Limpiar todo"
+
+#: includes/I18nStrings.php:54
 msgid "Click here"
 msgstr "Haga clic aquí"
 
-#: includes/I18nStrings.php:74 svn/trunk/includes/I18nStrings.php:74
+#: admin/table-builder/config/setting.php:221
+msgid "Color"
+msgstr ""
+
+#: includes/I18nStrings.php:74
 msgid "Column Key"
 msgstr "Clave de columna"
 
-#: includes/I18nStrings.php:73 svn/trunk/includes/I18nStrings.php:73
+#: includes/I18nStrings.php:73
 msgid "Column Name"
 msgstr "Nombre de columna"
 
-#: includes/I18nStrings.php:58 svn/trunk/includes/I18nStrings.php:58
+#: admin/table-builder/config/templates.php:57
+msgid "Comparison Table Four"
+msgstr ""
+
+#: admin/table-builder/config/templates.php:39
+msgid "Comparison Table One"
+msgstr ""
+
+#: admin/table-builder/config/templates.php:51
+msgid "Comparison Table Three"
+msgstr ""
+
+#: admin/table-builder/config/templates.php:45
+msgid "Comparison Table Two"
+msgstr ""
+
+#: admin/table-builder/config/templates.php:35
+msgid "Comparison Tables"
+msgstr ""
+
+#: includes/I18nStrings.php:58
 msgid "confirm"
 msgstr "confirmar"
 
-#: includes/I18nStrings.php:20 svn/trunk/includes/I18nStrings.php:20
+#: includes/I18nStrings.php:20
 msgid "CSV - Comma-separated values"
 msgstr "CSV - Valores separados por comas"
 
-#: includes/NinjaTableImport.php:284
-#: svn/trunk/includes/NinjaTableImport.php:284
+#: includes/NinjaTableImport.php:288
 msgid "CSV File is not valid"
 msgstr "El archivo CSV no es válido"
 
-#: includes/I18nStrings.php:104 svn/trunk/includes/I18nStrings.php:104
+#: includes/I18nStrings.php:104
 msgid "CSV Header Structure"
 msgstr "Estructura de encabezado CSV"
 
-#: includes/I18nStrings.php:43 svn/trunk/includes/I18nStrings.php:43
+#: includes/I18nStrings.php:43
 msgid "Custom CSS"
 msgstr "CSS personalizado"
 
-#: includes/I18nStrings.php:75 svn/trunk/includes/I18nStrings.php:75
+#: includes/I18nStrings.php:75
 msgid "Data Type"
 msgstr "Tipo de datos"
 
-#: includes/I18nStrings.php:68 svn/trunk/includes/I18nStrings.php:68
+#: includes/I18nStrings.php:68
 msgid "Date Field"
 msgstr "Campo de fecha"
 
-#: includes/I18nStrings.php:78 svn/trunk/includes/I18nStrings.php:78
+#: includes/I18nStrings.php:78
 msgid "Date Format"
 msgstr "Formato de fecha"
 
-#: includes/I18nStrings.php:33 svn/trunk/includes/I18nStrings.php:33
+#: includes/I18nStrings.php:33
 msgid "Deactivate License"
 msgstr "Desactivar licencia"
 
-#: includes/I18nStrings.php:19 svn/trunk/includes/I18nStrings.php:19
+#: includes/I18nStrings.php:19
 msgid "Delete"
 msgstr "Borrar"
 
-#: includes/I18nStrings.php:47 svn/trunk/includes/I18nStrings.php:47
+#: includes/I18nStrings.php:47
 msgid "Delete Entries"
 msgstr "Eliminar entradas"
 
-#: includes/I18nStrings.php:39 svn/trunk/includes/I18nStrings.php:39
+#: admin/table-builder/config/responsive.php:26
+#: admin/table-builder/config/responsive.php:73
+msgid "Disable Breakpoint"
+msgstr ""
+
+#: includes/I18nStrings.php:39
 msgid "Documentation"
 msgstr "Documentación"
 
-#: includes/I18nStrings.php:105 svn/trunk/includes/I18nStrings.php:105
+#: includes/I18nStrings.php:37
+msgid "Documentation and Help"
+msgstr ""
+
+#: includes/I18nStrings.php:105
 msgid "Download Sample CSV"
 msgstr "Descargar el archivo CSV de ejemplo"
 
-#: includes/I18nStrings.php:18 svn/trunk/includes/I18nStrings.php:18
+#: includes/I18nStrings.php:18
 msgid "Duplicate"
 msgstr "Duplicado"
 
 #: includes/I18nStrings.php:16 admin/NinjaTablesAdmin.php:89
-#: svn/trunk/includes/I18nStrings.php:16
-#: svn/trunk/admin/NinjaTablesAdmin.php:89
+#: public/views/frameless/show_ntb_preview.php:31
+#: public/views/frameless/show_preview.php:29
 msgid "Edit"
 msgstr "Editar"
 
-#: admin/NinjaTablesAdmin.php:90 svn/trunk/admin/NinjaTablesAdmin.php:90
-#: includes/libs/TableDrivers/views/ninja_foo_table.php:40
-#: svn/trunk/includes/libs/TableDrivers/views/ninja_foo_table.php:40
+#: admin/NinjaTablesAdmin.php:90 public/views/table_builder_html.php:38
+#: includes/libs/TableDrivers/views/ninja_foo_table.php:44
 msgid "Edit Table"
 msgstr "Editar Tabla"
 
-#: includes/I18nStrings.php:91 svn/trunk/includes/I18nStrings.php:91
+#: admin/table-builder/config/templates.php:70
+msgid "Employee Table One"
+msgstr ""
+
+#: admin/table-builder/config/templates.php:82
+msgid "Employee Table Three"
+msgstr ""
+
+#: admin/table-builder/config/templates.php:76
+msgid "Employee Table Two"
+msgstr ""
+
+#: admin/table-builder/config/templates.php:66
+msgid "Employee Tables"
+msgstr ""
+
+#: admin/table-builder/config/responsive.php:10
+msgid "Enable Responsive Table"
+msgstr ""
+
+#: includes/I18nStrings.php:91
 msgid "Enable sorting of the table by the visitor"
 msgstr "Habilitar la clasificación de la mesa por el visitante"
 
-#: includes/I18nStrings.php:90 svn/trunk/includes/I18nStrings.php:90
+#: includes/I18nStrings.php:90
 msgid "Enable the visitor to filter or search the table."
 msgstr "Permitir que el visitante filtre o busque en la tabla."
 
-#: includes/I18nStrings.php:35 svn/trunk/includes/I18nStrings.php:35
+#: includes/I18nStrings.php:35
 msgid "Enter your license key"
 msgstr "Introduce tu clave de licencia"
 
-#: includes/I18nStrings.php:100 svn/trunk/includes/I18nStrings.php:100
+#: admin/table-builder/config/setting.php:83
+msgid "Even Row Background"
+msgstr ""
+
+#: includes/I18nStrings.php:100
 msgid "Export Table"
 msgstr "Exportar Tabla"
 
-#: includes/I18nStrings.php:82 svn/trunk/includes/I18nStrings.php:82
+#: includes/I18nStrings.php:82
 msgid "Extra Classes"
 msgstr "Clases extra"
 
-#: includes/I18nStrings.php:95 svn/trunk/includes/I18nStrings.php:95
+#: includes/I18nStrings.php:95
 msgid "Extra CSS Class for the table"
 msgstr "Clase extra de CSS para la Tabla"
 
-#: includes/I18nStrings.php:86 svn/trunk/includes/I18nStrings.php:86
+#: includes/I18nStrings.php:86
 msgid "Filterable"
 msgstr "Filtrable"
 
-#: includes/I18nStrings.php:98 svn/trunk/includes/I18nStrings.php:98
+#: admin/table-builder/config/setting.php:105
+msgid "First Column Sticky"
+msgstr ""
+
+#: admin/table-builder/config/setting.php:100
+msgid "First Row Sticky"
+msgstr ""
+
+#: admin/table-builder/config/setting.php:226
+msgid "Font Family"
+msgstr ""
+
+#: admin/table-builder/config/setting.php:214
+msgid "Font Size"
+msgstr ""
+
+#: includes/I18nStrings.php:98
 msgid "Footer Colors"
 msgstr "Colores de pie de página"
 
-#: includes/I18nStrings.php:38 svn/trunk/includes/I18nStrings.php:38
+#: includes/I18nStrings.php:38
 msgid ""
 "For any type of query which was not covered in our documentation, Please "
 "submit a support ticket ticket"
@@ -231,124 +337,178 @@ msgstr ""
 "Para cualquier tipo de consulta que no esté cubierta en nuestra "
 "documentación, envíe un ticket de soporte"
 
-#: includes/I18nStrings.php:87 svn/trunk/includes/I18nStrings.php:87
+#: admin/table-builder/config/component.php:12
+#: admin/table-builder/config/responsive.php:5
+#: admin/table-builder/config/setting.php:5
+msgid "General"
+msgstr ""
+
+#: admin/table-builder/config/setting.php:195
+msgid "Global Style"
+msgstr ""
+
+#: admin/table-builder/config/responsive.php:61
+#: admin/table-builder/config/responsive.php:108
+msgid "Group Separator"
+msgstr ""
+
+#: admin/table-builder/config/setting.php:78
+msgid "Header Background"
+msgstr ""
+
+#: includes/I18nStrings.php:87
 msgid "Header HTML Content"
 msgstr "Contenido HTML del encabezado"
 
+#: admin/table-builder/config/setting.php:164
+msgid "Header Inner Border"
+msgstr ""
+
 #: includes/I18nStrings.php:9 admin/NinjaTablesAdmin.php:218
-#: svn/trunk/includes/I18nStrings.php:9
-#: svn/trunk/admin/NinjaTablesAdmin.php:218
 msgid "Help"
 msgstr "Ayuda"
 
-#: includes/I18nStrings.php:7 svn/trunk/includes/I18nStrings.php:7
+#: includes/I18nStrings.php:7
 msgid "Home"
 msgstr "Casa"
 
-#: includes/I18nStrings.php:66 svn/trunk/includes/I18nStrings.php:66
+#: admin/table-builder/config/component.php:117
+msgid "HTML"
+msgstr ""
+
+#: includes/I18nStrings.php:66
 msgid "HTML Field"
 msgstr "Campo HTML"
 
 #. Author URI of the plugin
-msgid "https://wpmanageninja.com/"
-msgstr "https://wpmanageninja.com/"
+msgid "https://ninjatables.com/"
+msgstr ""
 
 #. URI of the plugin
 msgid "https://wpmanageninja.com/downloads/ninja-tables-pro-add-on/"
 msgstr "https://wpmanageninja.com/downloads/ninja-tables-pro-add-on/"
 
+#: admin/table-builder/config/component.php:68
+msgid "Icon"
+msgstr ""
+
+#: admin/table-builder/config/component.php:140
+msgid "Image"
+msgstr ""
+
 #: includes/I18nStrings.php:23 admin/NinjaTablesAdmin.php:148
-#: svn/trunk/includes/I18nStrings.php:23
-#: svn/trunk/admin/NinjaTablesAdmin.php:148
 msgid "Import"
 msgstr "Importar"
 
-#: includes/I18nStrings.php:44 svn/trunk/includes/I18nStrings.php:44
+#: includes/I18nStrings.php:44
 msgid "Import - Export"
 msgstr "Importar - exportar"
 
-#: includes/I18nStrings.php:28 svn/trunk/includes/I18nStrings.php:28
+#: includes/I18nStrings.php:28
 msgid "Import Format:"
 msgstr "Importar Formato:"
 
-#: includes/I18nStrings.php:103 svn/trunk/includes/I18nStrings.php:103
+#: includes/I18nStrings.php:103
 msgid "Import from CSV"
 msgstr "Importar desde un archivo .CSV"
 
-#: includes/I18nStrings.php:12 svn/trunk/includes/I18nStrings.php:12
+#: includes/I18nStrings.php:12
 msgid "Import Table"
 msgstr "Tabla de importación"
 
-#: includes/I18nStrings.php:101 svn/trunk/includes/I18nStrings.php:101
+#: includes/I18nStrings.php:101
 msgid "Import Table Data"
 msgstr "Importar los Datos de Tabla"
 
-#: includes/I18nStrings.php:59 svn/trunk/includes/I18nStrings.php:59
+#: includes/I18nStrings.php:59
 msgid "Initial Hidden Mobile"
 msgstr "Inicial Móvil Oculto"
 
-#: includes/I18nStrings.php:60 svn/trunk/includes/I18nStrings.php:60
+#: includes/I18nStrings.php:60
 msgid "Initial Hidden Mobile and Tab"
 msgstr "Móvil y pestaña iniciales ocultos"
 
-#: includes/I18nStrings.php:61 svn/trunk/includes/I18nStrings.php:61
+#: includes/I18nStrings.php:61
 msgid "Initial Hidden Mobile, Tab and Regular Computers"
 msgstr "Inicial móvil oculta, pestaña y computadoras regulares"
 
-#: admin/NinjaTablesAdmin.php:1162 svn/trunk/admin/NinjaTablesAdmin.php:1170
+#: admin/table-builder/config/setting.php:169
+msgid "Inner Border Color"
+msgstr ""
+
+#: admin/table-builder/config/setting.php:174
+msgid "Inner Border Size"
+msgstr ""
+
+#: admin/NinjaTablesAdmin.php:1188
 msgid "Insert Ninja Tables Shortcode"
 msgstr "Insertar código corto de Ninja Tables"
 
-#: admin/NinjaTablesAdmin.php:1164 svn/trunk/admin/NinjaTablesAdmin.php:1172
+#: admin/NinjaTablesAdmin.php:1190
 msgid "Insert Shortcode"
 msgstr "Insertar Shortcode"
 
-#: admin/NinjaTablesAdmin.php:706 svn/trunk/admin/NinjaTablesAdmin.php:714
+#: admin/NinjaTablesAdmin.php:714
 msgid "Invalid Table to Delete"
 msgstr "Tabla no válida para eliminar"
 
-#: includes/I18nStrings.php:22 svn/trunk/includes/I18nStrings.php:22
+#: admin/table-builder/config/responsive.php:53
+#: admin/table-builder/config/responsive.php:100
+msgid "Items Per Header"
+msgstr ""
+
+#: includes/I18nStrings.php:22
 msgid "JSON - Exported From Ninja Tables"
 msgstr "JSON - Exportado De Ninja Tables"
 
-#: includes/I18nStrings.php:21 svn/trunk/includes/I18nStrings.php:21
+#: includes/I18nStrings.php:21
 msgid "JSON - JavaScript Object Notation"
 msgstr "JSON - Notación de objetos de JavaScript"
 
-#: includes/I18nStrings.php:25 svn/trunk/includes/I18nStrings.php:25
+#: includes/I18nStrings.php:25
 msgid "License"
 msgstr "Licencia"
 
-#: includes/I18nStrings.php:34 svn/trunk/includes/I18nStrings.php:34
+#: includes/I18nStrings.php:34
 msgid "Licensing"
 msgstr "Licencia"
 
-#: includes/I18nStrings.php:83 svn/trunk/includes/I18nStrings.php:83
+#: admin/table-builder/config/component.php:98
+msgid "List"
+msgstr ""
+
+#: admin/table-builder/config/setting.php:207
+msgid "Margin Bottom"
+msgstr ""
+
+#: admin/table-builder/config/setting.php:200
+msgid "Margin Top"
+msgstr ""
+
+#: includes/I18nStrings.php:83
 msgid "Max Width"
 msgstr "Anchura máxima"
 
-#: includes/I18nStrings.php:84 svn/trunk/includes/I18nStrings.php:84
+#: includes/I18nStrings.php:84
 msgid "Maximum Width"
 msgstr "Ancho máximo"
 
-#: admin/NinjaTablesAdmin.php:91 svn/trunk/admin/NinjaTablesAdmin.php:91
+#: admin/table-builder/config/responsive.php:17
+msgid "Mode Options"
+msgstr ""
+
+#: admin/NinjaTablesAdmin.php:91
 msgid "New Table"
 msgstr "Nueva Tabla"
 
 #. Name of the plugin
 #: includes/I18nStrings.php:6 admin/NinjaTablesAdmin.php:73
 #: admin/NinjaTablesAdmin.php:84 admin/NinjaTablesAdmin.php:86
-#: svn/trunk/includes/I18nStrings.php:6 svn/trunk/admin/NinjaTablesAdmin.php:73
-#: svn/trunk/admin/NinjaTablesAdmin.php:84
-#: svn/trunk/admin/NinjaTablesAdmin.php:86
+#: admin/NinjaTablesAdmin.php:124
 msgid "Ninja Tables"
 msgstr "Ninja Tables"
 
-#: admin/NinjaTablesAdmin.php:124 svn/trunk/admin/NinjaTablesAdmin.php:124
-msgid "NinjaTables"
-msgstr "NinjaTables"
-
-#: includes/I18nStrings.php:26 svn/trunk/includes/I18nStrings.php:26
+#: includes/I18nStrings.php:26
 msgid ""
 "NinjaTables can import tables from existing data, like from a CSV or JSON "
 "file. You can also import existing tables from the other WordPress table "
@@ -358,207 +518,276 @@ msgstr ""
 "archivo CSV o JSON. También puede importar tablas existentes de los otros "
 "complementos de tablas de WordPress."
 
-#: includes/NinjaTableImport.php:26 svn/trunk/includes/NinjaTableImport.php:26
+#: includes/NinjaTableImport.php:29
 msgid "No appropriate driver found for the import format."
 msgstr ""
 "No se encontró el controlador apropiado para el formato de importación."
 
-#: public/dataProviders/FluentFormProvider.php:84
-#: svn/trunk/public/dataProviders/FluentFormProvider.php:84
+#: public/dataProviders/FluentFormProvider.php:121
 msgid "No fields were selected."
 msgstr "No se seleccionaron campos."
 
-#: includes/libs/TableDrivers/NinjaFooTable.php:64
-#: includes/libs/TableDrivers/NinjaFooTable.php:328
-#: svn/trunk/includes/libs/TableDrivers/NinjaFooTable.php:64
-#: svn/trunk/includes/libs/TableDrivers/NinjaFooTable.php:328
+#: includes/libs/TableDrivers/NinjaFooTable.php:66
+#: includes/libs/TableDrivers/NinjaFooTable.php:339
 msgid "No Result Found"
 msgstr "No se han encontrado resultados"
 
-#: admin/NinjaTablesAdmin.php:95 svn/trunk/admin/NinjaTablesAdmin.php:95
+#: admin/NinjaTablesAdmin.php:95
 msgid "No Table Found"
 msgstr "No se encontró ninguna tabla"
 
-#: admin/NinjaTablesAdmin.php:96 svn/trunk/admin/NinjaTablesAdmin.php:96
+#: admin/NinjaTablesAdmin.php:96
 msgid "No Table Found in Trash"
 msgstr "No se encontró ninguna Tabla en la basura"
 
 #: includes/libs/Migrations/NinjaTablesSupsysticTableMigration.php:24
-#: svn/trunk/includes/libs/Migrations/NinjaTablesSupsysticTableMigration.php:24
 msgid "No Table Found with the selected table"
 msgstr "No se encontró Tabla con la tabla seleccionada"
 
 #: includes/libs/Migrations/NinjaTablesUltimateTableMigration.php:21
-#: svn/trunk/includes/libs/Migrations/NinjaTablesUltimateTableMigration.php:21
 msgid "No Ultimate Table Found with the selected table"
 msgstr "No se encontró una tabla definitiva con la tabla seleccionada"
 
-#: includes/ninja_tables-global-functions.php:947
-#: svn/trunk/includes/ninja_tables-global-functions.php:917
+#: includes/ninja_tables-global-functions.php:1054
 msgid "Nonce verification failed, please try again."
 msgstr ""
 
-#: includes/I18nStrings.php:67 svn/trunk/includes/I18nStrings.php:67
+#: includes/I18nStrings.php:67
 msgid "Numeric Value"
 msgstr "Valor numérico"
 
-#: includes/I18nStrings.php:92 svn/trunk/includes/I18nStrings.php:92
+#: admin/table-builder/config/setting.php:88
+msgid "Odd Row Background"
+msgstr ""
+
+#: includes/I18nStrings.php:92
 msgid "Pagination Items Per Page"
 msgstr "Paginación de artículos por página"
 
-#: includes/I18nStrings.php:93 svn/trunk/includes/I18nStrings.php:93
+#: includes/I18nStrings.php:93
 msgid "Pagination Position"
 msgstr "Posición de paginación"
 
-#: admin/NinjaTablesAdmin.php:97 svn/trunk/admin/NinjaTablesAdmin.php:97
+#: admin/NinjaTablesAdmin.php:97
 msgid "Parent Table"
 msgstr "Parent Table"
 
-#: includes/I18nStrings.php:24 svn/trunk/includes/I18nStrings.php:24
+#: includes/I18nStrings.php:24
 msgid "Permission"
 msgstr "Permiso"
 
-#: includes/NinjaTableImport.php:295
-#: svn/trunk/includes/NinjaTableImport.php:295
+#: includes/NinjaTableImport.php:299
 msgid "Please set table configuration first"
 msgstr "Por favor, establezca la configuración de la tabla primero"
 
-#: includes/NinjaTableImport.php:121
-#: svn/trunk/includes/NinjaTableImport.php:121
+#: includes/NinjaTableImport.php:125
 msgid "Please upload valid CSV"
 msgstr "Por favor, cargue un archivo CSV válido"
 
-#: includes/NinjaTableImport.php:309
-#: svn/trunk/includes/NinjaTableImport.php:309
+#: admin/table-builder/ImportExport.php:33
+msgid "Please upload valid CSV or JSON"
+msgstr ""
+
+#: includes/NinjaTableImport.php:313
 #, fuzzy
 #| msgid "Please use the provided CSV header structure. "
 msgid "Please use the provided CSV header structure font face."
 msgstr "Utilice la estructura de encabezado CSV proporcionada."
 
-#: includes/I18nStrings.php:37 svn/trunk/includes/I18nStrings.php:37
-msgid "Plugin Documentation and Help"
-msgstr "Documentación del plugin y ayuda"
-
-#: includes/I18nStrings.php:17 svn/trunk/includes/I18nStrings.php:17
+#: includes/I18nStrings.php:17
 msgid "Preview"
 msgstr "Vista Previa"
 
-#: public/views/frameless/show_review.php:9
-#: svn/trunk/public/views/frameless/show_review.php:9
+#: public/views/frameless/show_ntb_preview.php:9
+#: public/views/frameless/show_preview.php:9
 msgid "Preview Table"
 msgstr ""
 
-#: includes/I18nStrings.php:102 svn/trunk/includes/I18nStrings.php:102
+#: admin/table-builder/config/templates.php:27
+msgid "Pricing Table Four"
+msgstr ""
+
+#: admin/table-builder/config/templates.php:9
+msgid "Pricing Table One"
+msgstr ""
+
+#: admin/table-builder/config/templates.php:21
+msgid "Pricing Table Three"
+msgstr ""
+
+#: admin/table-builder/config/templates.php:15
+msgid "Pricing Table Two"
+msgstr ""
+
+#: admin/table-builder/config/templates.php:5
+msgid "Pricing Tables"
+msgstr ""
+
+#: admin/table-builder/config/component.php:215
+msgid "Progress"
+msgstr ""
+
+#: admin/table-builder/config/component.php:82
+msgid "Rating"
+msgstr ""
+
+#: includes/I18nStrings.php:102
 msgid "Replace Existing Data"
 msgstr "Reemplazar los datos existentes"
 
-#: includes/I18nStrings.php:76 svn/trunk/includes/I18nStrings.php:76
+#: includes/I18nStrings.php:76
 msgid "Responsive Breakpoint"
 msgstr "Responsive Breakpoint"
 
-#: includes/I18nStrings.php:94 svn/trunk/includes/I18nStrings.php:94
+#: admin/table-builder/config/responsive.php:138
+msgid "Responsive Settings"
+msgstr ""
+
+#: admin/table-builder/config/component.php:184
+msgid "Ribbon"
+msgstr ""
+
+#: includes/I18nStrings.php:94
 msgid "Row Details (Responsive drawer)"
 msgstr "Detalles de Fila"
 
-#: includes/libs/TableDrivers/NinjaFooTable.php:63
-#: includes/libs/TableDrivers/NinjaFooTable.php:326
-#: svn/trunk/includes/libs/TableDrivers/NinjaFooTable.php:63
-#: svn/trunk/includes/libs/TableDrivers/NinjaFooTable.php:326
+#: admin/table-builder/config/templates.php:95
+msgid "Schedule Table One"
+msgstr ""
+
+#: admin/table-builder/config/templates.php:107
+msgid "Schedule Table Three"
+msgstr ""
+
+#: admin/table-builder/config/templates.php:101
+msgid "Schedule Table Two"
+msgstr ""
+
+#: admin/table-builder/config/templates.php:91
+msgid "Schedule Tables"
+msgstr ""
+
+#: includes/libs/TableDrivers/NinjaFooTable.php:65
+#: includes/libs/TableDrivers/NinjaFooTable.php:337
 msgid "Search"
 msgstr "Buscar"
 
-#: includes/libs/TableDrivers/NinjaFooTable.php:62
-#: includes/libs/TableDrivers/NinjaFooTable.php:324
-#: svn/trunk/includes/libs/TableDrivers/NinjaFooTable.php:62
-#: svn/trunk/includes/libs/TableDrivers/NinjaFooTable.php:324
+#: includes/libs/TableDrivers/NinjaFooTable.php:64
+#: includes/libs/TableDrivers/NinjaFooTable.php:335
 msgid "Search in"
 msgstr "Busca en"
 
-#: admin/NinjaTablesAdmin.php:94 svn/trunk/admin/NinjaTablesAdmin.php:94
+#: admin/NinjaTablesAdmin.php:94
 msgid "Search Table"
 msgstr "Busqueda de Tabla"
 
-#: includes/I18nStrings.php:80 svn/trunk/includes/I18nStrings.php:80
+#: includes/I18nStrings.php:80
 msgid "Select a Format"
 msgstr "Seleccione un formato"
 
-#: admin/NinjaTablesAdmin.php:1185 svn/trunk/admin/NinjaTablesAdmin.php:1193
+#: admin/NinjaTablesAdmin.php:1211
 msgid "Select a Table"
 msgstr "Seleccione una Tabla"
 
-#: admin/NinjaTablesAdmin.php:1161 svn/trunk/admin/NinjaTablesAdmin.php:1169
+#: admin/NinjaTablesAdmin.php:1187
 msgid "Select a Table to insert"
 msgstr "Seleccione una tabla para insertar"
 
-#: includes/I18nStrings.php:45 svn/trunk/includes/I18nStrings.php:45
+#: includes/I18nStrings.php:45
 msgid "Select bulk action"
 msgstr "Seleccione acción masiva"
 
-#: includes/I18nStrings.php:69 svn/trunk/includes/I18nStrings.php:69
+#: includes/I18nStrings.php:69
 msgid "Select Field"
 msgstr "Seleccionar campo"
 
-#: includes/I18nStrings.php:27 svn/trunk/includes/I18nStrings.php:27
+#: includes/I18nStrings.php:27
 msgid "Select file:"
 msgstr "Seleccione Archivo:"
 
-#: includes/I18nStrings.php:81 svn/trunk/includes/I18nStrings.php:81
+#: includes/I18nStrings.php:81
 msgid "Select Items"
 msgstr "Seleccionar artículos"
 
-#: admin/NinjaTablesAdmin.php:1578 admin/NinjaTablesAdmin.php:1624
-#: admin/NinjaTablesAdmin.php:1657 svn/trunk/admin/NinjaTablesAdmin.php:1586
-#: svn/trunk/admin/NinjaTablesAdmin.php:1632
-#: svn/trunk/admin/NinjaTablesAdmin.php:1665
+#: includes/libs/TableDrivers/NinjaFooTable.php:68
+msgid "Selected"
+msgstr "seleccionado"
+
+#: admin/table-builder/config/setting.php:22
+msgid "Separate Columns/Rows"
+msgstr ""
+
+#: admin/NinjaTablesAdmin.php:1620 admin/NinjaTablesAdmin.php:1667
+#: admin/NinjaTablesAdmin.php:1700
 msgid "Settings successfully updated"
 msgstr "Configuraciones actualizadas exitosamente"
 
-#: includes/I18nStrings.php:15 svn/trunk/includes/I18nStrings.php:15
+#: includes/I18nStrings.php:15
 msgid "ShortCode"
 msgstr "Código corto"
 
-#: includes/I18nStrings.php:89 svn/trunk/includes/I18nStrings.php:89
+#: admin/table-builder/config/component.php:128
+msgid "Shortcode"
+msgstr ""
+
+#: includes/I18nStrings.php:89
 msgid "Show Table Description"
 msgstr "Mostrar descripción de tabla"
 
-#: includes/I18nStrings.php:88 svn/trunk/includes/I18nStrings.php:88
+#: includes/I18nStrings.php:88
 msgid "Show Table Title"
 msgstr "Mostrar el título de Tabla"
 
-#: includes/I18nStrings.php:64 svn/trunk/includes/I18nStrings.php:64
+#: includes/I18nStrings.php:64
 msgid "Single Line Text Field"
 msgstr "Campo de texto de una sola línea"
 
-#: includes/NinjaTableImport.php:138
-#: svn/trunk/includes/NinjaTableImport.php:138
+#: includes/NinjaTableImport.php:142 admin/table-builder/ImportExport.php:55
 msgid "Something is wrong when parsing the csv"
 msgstr "Algo está mal al analizar el archivo csv"
 
-#: includes/I18nStrings.php:79 svn/trunk/includes/I18nStrings.php:79
+#: admin/table-builder/config/setting.php:27
+msgid "Space Between Columns"
+msgstr ""
+
+#: admin/table-builder/config/setting.php:34
+msgid "Space Between Rows"
+msgstr ""
+
+#: includes/I18nStrings.php:79
 msgid "Standard"
 msgstr "Estándar"
 
-#: includes/NinjaTableImport.php:158 includes/NinjaTableImport.php:184
-#: includes/NinjaTableImport.php:251
-#: svn/trunk/includes/NinjaTableImport.php:158
-#: svn/trunk/includes/NinjaTableImport.php:184
-#: svn/trunk/includes/NinjaTableImport.php:251
+#: admin/table-builder/config/responsive.php:127
+msgid "Static Top Row"
+msgstr ""
+
+#: admin/table-builder/config/setting.php:95
+msgid "Sticky"
+msgstr ""
+
+#: admin/table-builder/config/component.php:163
+msgid "Stylist List"
+msgstr ""
+
+#: includes/NinjaTableImport.php:162 includes/NinjaTableImport.php:188
+#: includes/NinjaTableImport.php:255
 msgid "Successfully added a table."
 msgstr "Se ha añadido con éxito una tabla."
 
-#: admin/NinjaTablesAdmin.php:1015 svn/trunk/admin/NinjaTablesAdmin.php:1023
+#: admin/NinjaTablesAdmin.php:1041
 msgid "Successfully deleted data."
 msgstr "Datos eliminados con éxito."
 
-#: admin/NinjaTablesAdmin.php:724 svn/trunk/admin/NinjaTablesAdmin.php:732
+#: admin/NinjaTablesAdmin.php:732
 msgid "Successfully deleted the table."
 msgstr "Se ha eliminado correctamente la tabla."
 
-#: admin/NinjaTablesAdmin.php:1298 svn/trunk/admin/NinjaTablesAdmin.php:1306
+#: admin/NinjaTablesAdmin.php:1325
 msgid "Successfully duplicated table."
 msgstr "Tabla duplicada con éxito."
 
-#: includes/NinjaTableImport.php:73 svn/trunk/includes/NinjaTableImport.php:73
+#: includes/NinjaTableImport.php:77
 msgid ""
 "Successfully imported. Please go to all tables and review your newly "
 "imported table."
@@ -566,68 +795,99 @@ msgstr ""
 "Importado con éxito. Por favor, vaya a todas las tablas y revise su tabla "
 "recién importada."
 
-#: admin/NinjaTablesAdmin.php:927 svn/trunk/admin/NinjaTablesAdmin.php:935
+#: admin/NinjaTablesAdmin.php:945
 msgid "Successfully saved the data."
 msgstr "Se guardó con éxito los datos."
 
-#: admin/NinjaTablesAdmin.php:680 svn/trunk/admin/NinjaTablesAdmin.php:688
+#: admin/NinjaTablesAdmin.php:688
 msgid "Successfully updated configuration."
 msgstr "Configuración actualizada con éxito."
 
-#: includes/NinjaTableImport.php:349
-#: svn/trunk/includes/NinjaTableImport.php:349
+#: includes/NinjaTableImport.php:353
 msgid "Successfully uploaded data."
 msgstr "Los datos subidos con éxito."
 
-#: admin/NinjaTablesAdmin.php:85 svn/trunk/admin/NinjaTablesAdmin.php:85
+#: admin/NinjaTablesAdmin.php:85
 msgid "Table"
 msgstr "Tabla"
 
-#: includes/I18nStrings.php:97 svn/trunk/includes/I18nStrings.php:97
+#: admin/table-builder/config/responsive.php:154
+#: admin/table-builder/config/responsive.php:170
+#: admin/table-builder/config/setting.php:17
+msgid "Table Alignment"
+msgstr ""
+
+#: includes/I18nStrings.php:97
 msgid "Table Body Colors"
 msgstr "Colores del cuerpo de Tabla"
 
-#: includes/I18nStrings.php:41 svn/trunk/includes/I18nStrings.php:41
+#: admin/table-builder/config/setting.php:147
+msgid "Table Border"
+msgstr ""
+
+#: admin/table-builder/config/setting.php:57
+msgid "Table Cell Min Auto Width"
+msgstr ""
+
+#: includes/I18nStrings.php:41
 msgid "Table Configuration"
 msgstr "Configuración de la tabla"
 
-#: includes/I18nStrings.php:42 svn/trunk/includes/I18nStrings.php:42
+#: admin/table-builder/config/setting.php:64
+msgid "Table Container Max Height"
+msgstr ""
+
+#: admin/table-builder/config/setting.php:43
+#: admin/table-builder/config/setting.php:48
+msgid "Table Container Max Width"
+msgstr ""
+
+#: includes/I18nStrings.php:42
 msgid "Table Design"
 msgstr "Diseño de Tabla"
 
-#: includes/I18nStrings.php:96 svn/trunk/includes/I18nStrings.php:96
+#: includes/I18nStrings.php:96
 msgid "Table Header Colors"
 msgstr "Colores de encabezado de tabla"
 
-#: includes/I18nStrings.php:40 svn/trunk/includes/I18nStrings.php:40
+#: admin/table-builder/config/setting.php:117
+msgid "Table Role"
+msgstr ""
+
+#: includes/I18nStrings.php:40
 msgid "Table Rows"
 msgstr "Filas de Tabla"
 
-#: admin/NinjaTablesAdmin.php:140 svn/trunk/admin/NinjaTablesAdmin.php:140
+#: admin/NinjaTablesAdmin.php:140
 msgid "Tables"
 msgstr ""
 
-#: includes/NinjaTableImport.php:262
-#: svn/trunk/includes/NinjaTableImport.php:262
+#: includes/NinjaTableImport.php:266
 #: includes/libs/Migrations/NinjaTablesMigration.php:22
-#: svn/trunk/includes/libs/Migrations/NinjaTablesMigration.php:22
 msgid "Temporary table description"
 msgstr "Descripción de la tabla temporal"
 
-#: includes/NinjaTableImport.php:261
-#: svn/trunk/includes/NinjaTableImport.php:261
+#: includes/NinjaTableImport.php:265
 #: includes/libs/Migrations/NinjaTablesMigration.php:19
-#: svn/trunk/includes/libs/Migrations/NinjaTablesMigration.php:19
 msgid "Temporary table name"
 msgstr "Nombre de la tabla temporal"
 
-#: includes/I18nStrings.php:85 svn/trunk/includes/I18nStrings.php:85
+#: admin/table-builder/NinjaTableBuilder.php:259
+#: admin/table-builder/config/component.php:16
+msgid "Text"
+msgstr ""
+
+#: includes/I18nStrings.php:85
 msgid "Text Align"
 msgstr "Alineado de Texto "
 
-#: includes/I18nStrings.php:65 svn/trunk/includes/I18nStrings.php:65
+#: includes/I18nStrings.php:65
 msgid "Text Area"
 msgstr "Area de texto"
+
+#: admin/table-builder/config/component.php:233
+msgid "Text Icon"
+msgstr ""
 
 #. Description of the plugin
 msgid ""
@@ -638,48 +898,49 @@ msgstr ""
 "Múltiples plantillas, creador de tablas en vivo con arrastrar y soltar, "
 "combinación de colores múltiples y estilos."
 
-#: admin/NinjaTablesAdmin.php:548 svn/trunk/admin/NinjaTablesAdmin.php:548
+#: admin/NinjaTablesAdmin.php:554
 msgid "The name field is required."
 msgstr "El campo de nombre es obligatorio."
 
-#: public/dataProviders/FluentFormProvider.php:77
-#: svn/trunk/public/dataProviders/FluentFormProvider.php:77
+#: public/dataProviders/FluentFormProvider.php:114
 msgid "The title field is required."
 msgstr "El campo de título es obligatorio."
 
-#: includes/I18nStrings.php:14 svn/trunk/includes/I18nStrings.php:14
+#: includes/I18nStrings.php:14
 msgid "Title"
 msgstr "Título"
 
-#: includes/I18nStrings.php:55 svn/trunk/includes/I18nStrings.php:55
+#: includes/I18nStrings.php:55
 msgid "to view the upgrade guide."
 msgstr "para ver la guía de actualización."
 
 #: includes/I18nStrings.php:8 admin/NinjaTablesAdmin.php:156
-#: svn/trunk/includes/I18nStrings.php:8
-#: svn/trunk/admin/NinjaTablesAdmin.php:156
 msgid "Tools"
 msgstr "Herramientas"
 
-#: includes/I18nStrings.php:63 svn/trunk/includes/I18nStrings.php:63
+#: admin/table-builder/config/responsive.php:47
+#: admin/table-builder/config/responsive.php:94
+#: admin/table-builder/config/responsive.php:120
+msgid "Top Row As Header"
+msgstr ""
+
+#: includes/I18nStrings.php:63
 msgid "Totally hidden on all devices"
 msgstr "Totalmente oculto en todos los dispositivos."
 
-#: includes/I18nStrings.php:77 svn/trunk/includes/I18nStrings.php:77
+#: includes/I18nStrings.php:77
 msgid "Update"
 msgstr "Actualizar"
 
-#: includes/I18nStrings.php:70 svn/trunk/includes/I18nStrings.php:70
+#: includes/I18nStrings.php:70
 msgid "Update Configuration"
 msgstr "Actualizar configuración"
 
-#: includes/I18nStrings.php:52 svn/trunk/includes/I18nStrings.php:52
+#: includes/I18nStrings.php:52
 msgid "Upgrade Notice"
 msgstr "Aviso de actualización"
 
 #: admin/NinjaTablesAdmin.php:92 admin/NinjaTablesAdmin.php:93
-#: svn/trunk/admin/NinjaTablesAdmin.php:92
-#: svn/trunk/admin/NinjaTablesAdmin.php:93
 msgid "View Table"
 msgstr "Ver Tabla"
 
@@ -687,20 +948,19 @@ msgstr "Ver Tabla"
 msgid "WPManageNinja LLC"
 msgstr "WPManageNinja LLC"
 
-#: includes/NinjaTableImport.php:211
-#: svn/trunk/includes/NinjaTableImport.php:211
+#: includes/NinjaTableImport.php:215
 msgid "You have a faulty JSON file. Please export a new one."
 msgstr "Tienes un archivo JSON defectuoso. Por favor exporta uno nuevo."
 
-#: includes/I18nStrings.php:31 svn/trunk/includes/I18nStrings.php:31
+#: includes/I18nStrings.php:31
 msgid "Your License is Active"
 msgstr "Su licencia está activa"
 
-#: includes/I18nStrings.php:32 svn/trunk/includes/I18nStrings.php:32
+#: includes/I18nStrings.php:32
 msgid "Your license is active! Enjoy Ninja Tables Pro Add On"
 msgstr "¡Su licencia está activa! Disfrute Ninja Tables Pro Add On"
 
-#: includes/I18nStrings.php:53 svn/trunk/includes/I18nStrings.php:53
+#: includes/I18nStrings.php:53
 msgid ""
 "Your Ninja Tables Pro plugin is outdated. Please upgrade to its latest "
 "version."

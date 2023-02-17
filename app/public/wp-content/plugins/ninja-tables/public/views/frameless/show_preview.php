@@ -26,7 +26,7 @@
             </ul>
         </div>
         <div class="nt_preview_header_action">
-            <a href="<?php echo esc_url_raw(admin_url('admin.php?page=ninja_tables#/tables/' . $table_id)) ?>">Edit</a>
+            <a href="<?php echo esc_url_raw(admin_url('admin.php?page=ninja_tables#/tables/' . $table_id)) ?>"> <?php esc_attr_e('Edit', 'ninja-tables') ?> </a>
         </div>
     </div>
 

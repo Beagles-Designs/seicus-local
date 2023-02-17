@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Yoast SEO - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-01-25 22:09:46+0000\n"
+"PO-Revision-Date: 2023-02-07 08:59:38+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,6 +11,19 @@ msgstr ""
 "Language: de\n"
 "Project-Id-Version: Plugins - Yoast SEO - Stable (latest release)\n"
 
+#: admin/formatter/class-metabox-formatter.php:189 js/dist/block-editor.js:1
+#: js/dist/editor-modules.js:1 js/dist/externals-components.js:113
+#: js/dist/frontend-inspector-resources.js:1 js/dist/post-edit.js:11
+#: js/dist/term-edit.js:1
+msgid "Potentially non-inclusive"
+msgstr "Potenziell nicht inklusive"
+
+#. translators: CTA to finish the first time configuration. %s: Either
+#. first-time SEO configuration or SEO configuration.
+#: admin/class-admin.php:235
+msgid "Finish your %s"
+msgstr "Beende deine %s"
+
 #. translators: %1$s and %2$s expand to a span wrap to avoid linebreaks. %3$s
 #. expands to "Yoast SEO Premium".
 #: src/presenters/admin/sidebar-presenter.php:48 js/dist/new-settings.js:20
@@ -18,12 +31,12 @@ msgid "%1$sGet%2$s %3$s"
 msgstr "%1$sHol dir%2$s %3$s"
 
 #. translators: 1: Yoast SEO Premium
-#: src/integrations/admin/old-premium-integration.php:125
+#: src/integrations/admin/old-premium-integration.php:130
 msgid "Update to the latest version of %1$s!"
 msgstr "Auf die neueste Version von %1$s aktualisieren"
 
 #. translators: 1: Yoast SEO Premium, 2 and 3: opening and closing anchor tag.
-#: src/integrations/admin/old-premium-integration.php:117
+#: src/integrations/admin/old-premium-integration.php:122
 msgid "Please %2$supdate %1$s to the latest version%3$s to ensure you can fully use all Premium settings and features."
 msgstr "Bitte %2$saktualisiere %1$s auf die neueste Version%3$s, um sicherzustellen, dass du alle Premium-Einstellungen und -Funktionen vollständig nutzen kannst."
 
@@ -300,13 +313,13 @@ msgstr "Der Begriff %s konnte nicht erstellt werden, da er nicht indexierbar ist
 #. page, 2: Link closing tag.
 #: src/integrations/watchers/indexable-post-type-change-watcher.php:167
 msgid "It looks like you've added a new type of content to your website. We recommend that you review your %1$sSettings%2$s under Content types."
-msgstr "Anscheinend hast du deiner Website einen neuen Inhaltstyp hinzugefügt. Wir empfehlen dir, deine %1$sAnzeigeeinstellungen für die Suche%2$s zu überprüfen."
+msgstr "Anscheinend hast du deiner Website einen neuen Inhaltstyp hinzugefügt. Wir empfehlen dir, in deinen %1$sEinstellungen%2$s den Punkt Inhaltstypen zu überprüfen."
 
 #. translators: 1: Opening tag of the link to the Search appearance settings
 #. page, 2: Link closing tag.
 #: src/integrations/watchers/indexable-taxonomy-change-watcher.php:169
 msgid "It looks like you've added a new taxonomy to your website. We recommend that you review your %1$sSettings%2$s under Categories & tags."
-msgstr "Anscheinend hast du deiner Website eine neue Taxonomie hinzugefügt. Wir empfehlen dir, deine %1$sAnzeigeeinstellungen für die Suche%2$s zu überprüfen."
+msgstr "Anscheinend hast du deiner Website eine neue Taxonomie hinzugefügt. Wir empfehlen dir, in deinen %1$sEinstellungen%2$s den Punkt Kategorien & Schlagwörter überprüfen."
 
 #: src/presenters/admin/indexing-notification-presenter.php:87
 msgid "We need to re-analyze some of your SEO data because of a change in the visibility of your post types. Please help us do that by running the SEO data optimization. "
@@ -561,7 +574,7 @@ msgstr "Globaler Feed"
 msgid "Emoji scripts"
 msgstr "Emoji-Skripte"
 
-#: src/integrations/admin/first-time-configuration-notice-integration.php:138
+#: src/helpers/first-time-configuration-notice-helper.php:68
 msgid "SEO configuration"
 msgstr "SEO-Konfiguration"
 
@@ -644,7 +657,7 @@ msgstr "Durch das Entfernen globaler Kommentar-Feeds, werden Beitrags-Kommentar-
 
 #. translators: 1: Link start tag to the first-time configuration, 2: Link
 #. closing tag.
-#: src/integrations/admin/first-time-configuration-notice-integration.php:151
+#: src/integrations/admin/first-time-configuration-notice-integration.php:114
 msgid "We noticed that you haven't fully configured Yoast SEO yet. Optimize your SEO settings even further by using our improved %1$s First-time configuration%2$s."
 msgstr "Wir haben festgestellt, dass du Yoast SEO noch nicht vollständig konfiguriert hast. Optimiere deine SEO-Einstellungen noch weiter, indem du unsere verbesserte %1$sErstkonfiguration%2$s benutzt."
 
@@ -718,7 +731,7 @@ msgstr "Alle Umleitungsarten"
 msgid "The redirect type is the HTTP response code sent to the browser telling the browser what type of redirect is served. %1$sLearn more about redirect types%2$s."
 msgstr "Die Umleitungsart ist der HTTP-Rückmeldungscode, den an den Browser gesendet wird und dem Browser mitteilt, welche Art von Umleitung verwendet werden soll. %1$sLerne mehr über Umleitungsarten%2$s."
 
-#: src/integrations/admin/first-time-configuration-integration.php:125
+#: src/integrations/admin/first-time-configuration-integration.php:126
 msgid "First-time configuration"
 msgstr "Erstmalige Konfiguration"
 
@@ -932,7 +945,7 @@ msgstr "%s aktualisieren"
 #. translators: %s: expands to 'Yoast SEO Premium'.
 #. translators: 1: Yoast WooCommerce SEO
 #: src/integrations/admin/workouts-integration.php:309
-#: js/dist/integrations-page.js:13
+#: js/dist/integrations-page.js:17
 msgid "Activate %s"
 msgstr "%s aktivieren"
 
@@ -968,9 +981,9 @@ msgstr "Bitte erneuere dein Abonnement von %s"
 
 #. translators: 1: Link start tag to the first-time configuration, 2: Yoast
 #. SEO, 3: Link closing tag.
-#: src/integrations/admin/first-time-configuration-notice-integration.php:142
+#: src/integrations/admin/first-time-configuration-notice-integration.php:105
 msgid "Get started quickly with the %1$s%2$s First-time configuration%3$s and configure Yoast SEO with the optimal SEO settings for your site!"
-msgstr "Starte mit dem %1$s%2$s Konfigurationstraining %3$s und konfiguriere Yoast SEO mit den optimalen SEO-Einstellungen für deine Website!"
+msgstr "Starte mit der %1$s%2$s erstmaligen Konfiguration%3$s und konfiguriere Yoast SEO mit den optimalen SEO-Einstellungen für deine Website!"
 
 #: inc/class-wpseo-replace-vars.php:1498
 msgid "Current or first category title"
@@ -1228,7 +1241,7 @@ msgstr "Gib eine Rezeptbeschreibung ein"
 #: admin/views/redirects.php:22
 #: src/integrations/admin/crawl-settings-integration.php:331
 #: src/integrations/admin/social-templates-integration.php:251
-#: js/dist/integrations-page.js:3 js/dist/integrations-page.js:23
+#: js/dist/integrations-page.js:3 js/dist/integrations-page.js:27
 msgid "Unlock with Premium"
 msgstr "Mit Premium freischalten"
 
@@ -1339,7 +1352,7 @@ msgid "Serves #"
 msgstr "Reicht für #"
 
 #. translators: %s expands to Yoast SEO Premium.
-#: admin/class-admin.php:237
+#: admin/class-admin.php:248
 msgid "Required by %s"
 msgstr "Vorausgesetzt von %s"
 
@@ -1356,7 +1369,7 @@ msgstr "Automatische Updates sind basierend auf dieser Einstellung für %1$s akt
 #: src/presenters/admin/badge-presenter.php:80
 #: src/presenters/admin/badge-presenter.php:87
 #: js/dist/externals/componentsNew.js:136 js/dist/integrations-page.js:3
-#: js/dist/integrations-page.js:11 js/dist/integrations-page.js:23
+#: js/dist/integrations-page.js:27
 msgid "New"
 msgstr "Neu"
 
@@ -1448,7 +1461,7 @@ msgstr "Die %s-Integration bietet Vorschläge und Einblicke für Suchbegriffe, d
 msgid "This tab allows you to selectively disable %1$s integrations with third-party products for all sites in the network. By default all integrations are enabled, which allows site admins to choose for themselves if they want to toggle an integration on or off for their site. When you disable an integration here, site admins will not be able to use that integration at all."
 msgstr "Auf dieser Registerkarte kannst du %1$s Integrationen mit Produkten von Drittanbietern für alle Sites im Netzwerk selektiv deaktivieren. Standardmäßig sind alle Integrationen aktiviert, so dass Site-Admins selbst entscheiden können, ob sie eine Integration für ihre Site ein- oder ausschalten wollen. Wenn du hier eine Integration deaktivierst, können Site-Admins diese Integration überhaupt nicht mehr verwenden."
 
-#: admin/class-admin.php:248
+#: admin/class-admin.php:259
 msgid "Activate your subscription"
 msgstr "Abonnement aktivieren"
 
@@ -1861,7 +1874,7 @@ msgstr "Schema"
 
 #: admin/views/tabs/social/twitterbox.php:21
 msgid "Twitter uses Open Graph metadata just like Facebook, so be sure to keep the \"Add Open Graph metadata\" setting on the Facebook tab enabled if you want to optimize your site for Twitter."
-msgstr "Twitter nutzt die selben Open-Graph-Metadaten wie Facebook. Kontrolliere daher, ob du die „Open-Graph-Meta-Checkbox“ im Facebook-Tab aktiviert hast, um deine Seite auch für Twitter zu optimieren."
+msgstr "Twitter nutzt die selben Open-Graph-Metadaten wie Facebook. Kontrolliere daher, ob du die Checkbox „Open-Graph-Metadaten hinzufügen“ im Facebook-Tab aktiviert hast, um deine Seite auch für Twitter zu optimieren."
 
 #: admin/admin-settings-changed-listener.php:81
 msgid "Settings saved."
@@ -2010,7 +2023,7 @@ msgid "Post Noindexed"
 msgstr "Beitrag nicht indexiert"
 
 #. translators: %s: expends to Yoast SEO
-#: admin/class-admin.php:340
+#: admin/class-admin.php:351
 msgid "%s video tutorial"
 msgstr "%s Video Tutorial"
 
@@ -2039,8 +2052,8 @@ msgstr "Google hat die API zur Anzeige der Crawling-Fehler eingestellt. Deswegen
 
 #: admin/views/tabs/metas/paper-content/general/knowledge-graph.php:63
 #: admin/views/tabs/metas/paper-content/general/knowledge-graph.php:69
-#: src/integrations/admin/first-time-configuration-integration.php:514
-#: src/integrations/admin/first-time-configuration-integration.php:527
+#: src/integrations/admin/first-time-configuration-integration.php:511
+#: src/integrations/admin/first-time-configuration-integration.php:524
 #: js/dist/new-settings.js:236
 msgid "Organization"
 msgstr "Organisation"
@@ -2064,7 +2077,7 @@ msgid "Choose whether the site represents an organization or a person."
 msgstr "Wähle, ob die Website eine Organisation oder eine Person repräsentiert."
 
 #: admin/views/tabs/metas/paper-content/general/knowledge-graph.php:113
-#: js/dist/new-settings.js:238
+#: js/dist/new-settings.js:240
 msgid "Personal info"
 msgstr "Persönliche Daten"
 
@@ -2074,15 +2087,15 @@ msgstr "Persönliche Daten"
 msgid "You have previously set your site to represent a person. We’ve improved our functionality around Schema and the Knowledge Graph, so you should go in and %1$scomplete those settings%2$s."
 msgstr "Du hast zuvor eingestellt, dass deine Website eine Person repräsentiert. Wir haben die Funktionalität rund um Schema und den Knowledge Graph verbessert, deshalb solltest du %1$sdiese Einstellungen%2$s vervollständigen."
 
-#: admin/class-admin.php:291
+#: admin/class-admin.php:302
 msgid "MySpace profile URL"
 msgstr "MySpace Profil URL"
 
-#: admin/class-admin.php:293
+#: admin/class-admin.php:304
 msgid "SoundCloud profile URL"
 msgstr "SoundCloud Profil URL"
 
-#: admin/class-admin.php:294
+#: admin/class-admin.php:305
 msgid "Tumblr profile URL"
 msgstr "Tumblr Profil URL"
 
@@ -2090,15 +2103,15 @@ msgstr "Tumblr Profil URL"
 msgid "Uncategorized"
 msgstr "Nicht kategorisiert"
 
-#: admin/class-admin.php:297
+#: admin/class-admin.php:308
 msgid "Wikipedia page about you"
 msgstr "Wikipedia-Seite über dich"
 
-#: admin/class-admin.php:297
+#: admin/class-admin.php:308
 msgid "(if one exists)"
 msgstr "(wenn eine existiert)"
 
-#: admin/class-admin.php:296
+#: admin/class-admin.php:307
 msgid "YouTube profile URL"
 msgstr "URL zum YouTube-Profil"
 
@@ -2106,15 +2119,15 @@ msgstr "URL zum YouTube-Profil"
 msgid "If a Wikipedia page for you or your organization exists, add it too."
 msgstr "Falls es eine Wikipedia-Seite für dich oder deine Organisation gibt, füge diese auch hinzu."
 
-#: admin/class-admin.php:292
+#: admin/class-admin.php:303
 msgid "Pinterest profile URL"
 msgstr "Pinterest-Profil-URL"
 
-#: admin/class-admin.php:289
+#: admin/class-admin.php:300
 msgid "Instagram profile URL"
 msgstr "Instagram-Profil-URL"
 
-#: admin/class-admin.php:290
+#: admin/class-admin.php:301
 msgid "LinkedIn profile URL"
 msgstr "LinkedIn-Profil-URL"
 
@@ -2209,7 +2222,7 @@ msgstr "Um die Datumsarchive von den Suchergebnissen auszuschließen, erhalten s
 
 #. translators: %s expands to Yoast SEO Premium
 #. translators: %s expands to "Yoast SEO" Premium
-#: admin/class-premium-upsell-admin-block.php:84 js/dist/new-settings.js:243
+#: admin/class-premium-upsell-admin-block.php:84 js/dist/new-settings.js:250
 msgid "Upgrade to %s"
 msgstr "%s buchen"
 
@@ -2259,7 +2272,7 @@ msgstr "Diese Funktion wurde durch den Netzwerkadministrator deaktiviert."
 msgid "Clear Image"
 msgstr "Bild löschen"
 
-#: admin/class-premium-upsell-admin-block.php:54 js/dist/new-settings.js:243
+#: admin/class-premium-upsell-admin-block.php:54 js/dist/new-settings.js:250
 msgid "Multiple keyphrases"
 msgstr "mehrere Keyphrasen"
 
@@ -2278,7 +2291,7 @@ msgstr "Fokus Keyphrase nicht festgelegt."
 #: js/dist/externals-components.js:15 js/dist/externals-components.js:67
 #: js/dist/externals-components.js:85 js/dist/externals-components.js:87
 #: js/dist/externals-components.js:89 js/dist/externals-components.js:91
-#: js/dist/new-settings.js:245
+#: js/dist/new-settings.js:252
 msgid "Get %s"
 msgstr "Erhalte %s"
 
@@ -2648,7 +2661,7 @@ msgstr "Mit diesem Vorgang importierst Beitragsmetadaten wie SEO-Titel und Besch
 #: admin/class-premium-upsell-admin-block.php:58 js/dist/block-editor.js:378
 #: js/dist/classic-editor.js:374 js/dist/elementor.js:378
 #: js/dist/externals-components.js:11 js/dist/externals-components.js:63
-#: js/dist/new-settings.js:243
+#: js/dist/new-settings.js:250
 msgid "24/7 email support"
 msgstr "24/7 E-Mail-Support"
 
@@ -3006,7 +3019,7 @@ msgstr "Text-Markierung entfernen"
 msgid "Errors"
 msgstr "Fehler"
 
-#: src/integrations/admin/first-time-configuration-notice-integration.php:138
+#: src/helpers/first-time-configuration-notice-helper.php:68
 msgid "First-time SEO configuration"
 msgstr "Erstmalige SEO-Konfiguration"
 
@@ -3077,8 +3090,7 @@ msgstr "Alter Konfigurations-Assistent"
 #: src/presenters/admin/help-link-presenter.php:75 js/dist/block-editor.js:464
 #: js/dist/externals/componentsNew.js:136 js/dist/externals/helpers.js:18
 #: js/dist/indexables-page.js:35 js/dist/integrations-page.js:3
-#: js/dist/integrations-page.js:11 js/dist/integrations-page.js:15
-#: js/dist/integrations-page.js:23
+#: js/dist/integrations-page.js:19 js/dist/integrations-page.js:27
 msgid "(Opens in a new browser tab)"
 msgstr "(Öffnet in einem neuen Browser Tab)"
 
@@ -3185,7 +3197,7 @@ msgstr "Cornerstone-Inhalt"
 
 #: src/integrations/admin/crawl-settings-integration.php:331
 msgid "Upgrade Premium"
-msgstr "Upgrade zu Premium"
+msgstr "Premium-Upgrade"
 
 #: admin/class-yoast-form.php:141 admin/class-yoast-form.php:146
 #: js/dist/first-time-configuration.js:3 js/dist/new-settings.js:1
@@ -3203,7 +3215,7 @@ msgstr "Das Plugin %2$s verändert die Ausgabe deiner Website je nachdem ob eine
 #: admin/class-premium-upsell-admin-block.php:56 js/dist/block-editor.js:376
 #: js/dist/classic-editor.js:372 js/dist/elementor.js:376
 #: js/dist/externals-components.js:9 js/dist/externals-components.js:61
-#: js/dist/new-settings.js:243
+#: js/dist/new-settings.js:250
 msgid "Superfast internal linking suggestions"
 msgstr "Superschnelle Vorschläge zur internen Verlinkung"
 
@@ -3213,30 +3225,30 @@ msgstr "Superschnelle Vorschläge zur internen Verlinkung"
 msgid "1 year free support and updates included!"
 msgstr "1 Jahr kostenfreier Support und Updates inbegriffen!"
 
-#: admin/class-premium-upsell-admin-block.php:57 js/dist/new-settings.js:243
+#: admin/class-premium-upsell-admin-block.php:57 js/dist/new-settings.js:250
 msgid "Facebook & Twitter"
 msgstr "Facebook & Twitter"
 
 #: admin/class-premium-upsell-admin-block.php:59 js/dist/block-editor.js:378
 #: js/dist/classic-editor.js:374 js/dist/elementor.js:378
 #: js/dist/externals-components.js:11 js/dist/externals-components.js:63
-#: js/dist/new-settings.js:243
+#: js/dist/new-settings.js:250
 msgid "No ads!"
 msgstr "Keine Werbung!"
 
-#: admin/class-premium-upsell-admin-block.php:55 js/dist/new-settings.js:243
+#: admin/class-premium-upsell-admin-block.php:55 js/dist/new-settings.js:250
 msgid "No more dead links"
 msgstr "Keine toten Links mehr"
 
-#: admin/class-premium-upsell-admin-block.php:55 js/dist/new-settings.js:243
+#: admin/class-premium-upsell-admin-block.php:55 js/dist/new-settings.js:250
 msgid "Easy redirect manager"
 msgstr "Einfacher Redirect Manager"
 
-#: admin/class-premium-upsell-admin-block.php:54 js/dist/new-settings.js:243
+#: admin/class-premium-upsell-admin-block.php:54 js/dist/new-settings.js:250
 msgid "Increase your SEO reach"
 msgstr "Vergrößere deine SEO-Reichweite"
 
-#: admin/class-premium-upsell-admin-block.php:57 js/dist/new-settings.js:243
+#: admin/class-premium-upsell-admin-block.php:57 js/dist/new-settings.js:250
 msgid "Social media preview"
 msgstr "Social-Media-Vorschau"
 
@@ -3250,7 +3262,7 @@ msgstr "Variable"
 msgid "Available variables"
 msgstr "Verfügbare Variablen"
 
-#: admin/class-admin.php:341
+#: admin/class-admin.php:352
 msgid "Scroll to see the table content."
 msgstr "Scrollen um den Tabellen-Inhalt zu sehen."
 
@@ -3304,7 +3316,7 @@ msgstr "Bitte zeige mir diese Benachrichtigung nicht mehr an"
 #. translators: %1$s: '%%term_title%%' variable used in titles and meta's
 #. template that's not compatible with the given template, %2$s: expands to
 #. 'HelpScout beacon'
-#: admin/class-admin.php:335
+#: admin/class-admin.php:346
 msgid "Warning: the variable %1$s cannot be used in this template. See the %2$s for more info."
 msgstr "Warnung: Die Variable %1$s kann in diesem Template nicht genutzt werden. Schau ins %2$s für weitere Informationen."
 
@@ -3336,7 +3348,7 @@ msgstr "Funktionen"
 #: admin/metabox/class-metabox.php:181 js/dist/externals/analysis.js:221
 #: js/dist/externals/analysis.js:275 js/dist/externals/analysis.js:393
 #: js/dist/externals/replacementVariableEditor.js:78
-#: js/dist/externals/searchMetadataPreviews.js:243 js/dist/new-settings.js:5
+#: js/dist/externals/searchMetadataPreviews.js:258 js/dist/new-settings.js:5
 #: js/dist/new-settings.js:7 js/dist/new-settings.js:10
 #: js/dist/new-settings.js:14 js/dist/new-settings.js:45
 #: js/dist/new-settings.js:56 js/dist/new-settings.js:80
@@ -3471,7 +3483,7 @@ msgstr "Bearbeite &#8221;%s&#8222;"
 msgid "Premium"
 msgstr "Premium"
 
-#: admin/class-admin.php:255
+#: admin/class-admin.php:266
 msgid "Get Premium"
 msgstr "Hol dir Premium"
 
@@ -3641,7 +3653,7 @@ msgstr "Neuer %1$s Titel"
 #. Yoast Plugins"
 #. translators: 1: Yoast WooCommerce SEO
 #: admin/views/licenses.php:224 admin/views/licenses.php:333
-#: js/dist/integrations-page.js:15
+#: js/dist/integrations-page.js:19
 msgid "Buy %s"
 msgstr "Kaufe %s"
 
@@ -3680,7 +3692,7 @@ msgstr "Entfernen"
 #: admin/pages/network.php:20 admin/views/tabs/dashboard/integrations.php:21
 #: admin/views/tabs/network/integrations.php:22
 #: src/integrations/admin/integrations-page.php:73
-#: js/dist/integrations-page.js:61
+#: js/dist/integrations-page.js:69
 msgid "Integrations"
 msgstr "Integrationen"
 
@@ -3708,7 +3720,7 @@ msgstr "Hervorgehoben"
 #: admin/views/tabs/metas/archives.php:19
 #: admin/views/tabs/metas/paper-content/author-archive-settings.php:16
 #: js/dist/new-settings.js:14 js/dist/new-settings.js:84
-#: js/dist/new-settings.js:241
+#: js/dist/new-settings.js:248
 msgid "Author archives"
 msgstr "Autor-Archiv"
 
@@ -3805,7 +3817,7 @@ msgstr "Mobile-Friendly-Test"
 msgid "%s does not seem to be a valid url. Please correct."
 msgstr "%s scheint keine korrekte URL zu sein. Bitte korrigieren."
 
-#: inc/options/class-wpseo-option-social.php:109
+#: inc/options/class-wpseo-option-social.php:110
 msgid "Summary with large image"
 msgstr "Zusammenfassung mit großem Bild"
 
@@ -3867,7 +3879,7 @@ msgid "%1$s does not seem to be a valid %2$s verification string. Please correct
 msgstr "%1$s scheint eine ungültige %2$s Bestätigungszeichenfolge zu sein. Bitte korrigieren."
 
 #. translators: %s expands to a twitter user name.
-#: inc/options/class-wpseo-option-social.php:182
+#: inc/options/class-wpseo-option-social.php:184
 msgid "%s does not seem to be a valid Twitter Username. Please correct."
 msgstr "%s scheint kein gültiger Twitter-Benutzername zu sein. Bitte korrigieren."
 
@@ -4004,7 +4016,7 @@ msgid "Import"
 msgstr "Import"
 
 #: admin/views/tabs/metas/paper-content/breadcrumbs-content.php:77
-#: js/dist/new-settings.js:245
+#: js/dist/new-settings.js:252
 msgid "Blog"
 msgstr "Blog"
 
@@ -4322,7 +4334,7 @@ msgstr "Nur für Super-Admins"
 #: admin/views/tabs/metas/archives.php:24
 #: admin/views/tabs/metas/paper-content/date-archives-settings.php:16
 #: js/dist/new-settings.js:14 js/dist/new-settings.js:145
-#: js/dist/new-settings.js:241
+#: js/dist/new-settings.js:248
 msgid "Date archives"
 msgstr "Datums-Archive"
 
@@ -4347,7 +4359,7 @@ msgid "Settings Updated."
 msgstr "Einstellungen gespeichert."
 
 #: admin/views/tabs/metas/general.php:47 js/dist/new-settings.js:10
-#: js/dist/new-settings.js:191 js/dist/new-settings.js:241
+#: js/dist/new-settings.js:191 js/dist/new-settings.js:248
 msgid "Homepage"
 msgstr "Homepage"
 
@@ -4369,7 +4381,7 @@ msgid "Site Admins (default)"
 msgstr "Seiten-Admins (Standard)"
 
 #: admin/pages/metas.php:24 js/dist/new-settings.js:207
-#: js/dist/new-settings.js:241
+#: js/dist/new-settings.js:248
 msgid "RSS"
 msgstr "RSS"
 
@@ -4388,12 +4400,12 @@ msgid "Title Separator"
 msgstr "Titel-Trennzeichen"
 
 #: admin/views/tabs/metas/archives.php:29 js/dist/new-settings.js:14
-#: js/dist/new-settings.js:241
+#: js/dist/new-settings.js:243 js/dist/new-settings.js:248
 msgid "Special pages"
 msgstr "Spezielle Seiten"
 
 #: admin/views/tabs/metas/paper-content/general/knowledge-graph.php:64
-#: src/integrations/admin/first-time-configuration-integration.php:519
+#: src/integrations/admin/first-time-configuration-integration.php:516
 #: js/dist/new-settings.js:236
 msgid "Person"
 msgstr "Person"
@@ -4506,7 +4518,7 @@ msgstr "Optimiere Deine Videos, um sie in den Suchergebnissen zu zeigen und hole
 
 #: admin/pages/metas.php:23 js/dist/new-settings.js:10
 #: js/dist/new-settings.js:12 js/dist/new-settings.js:106
-#: js/dist/new-settings.js:241
+#: js/dist/new-settings.js:248
 msgid "Breadcrumbs"
 msgstr "Breadcrumbs"
 
@@ -4550,7 +4562,6 @@ msgstr "Das %1$s Plugin könnte in Verbindung mit %2$s Fehler hervorrufen."
 
 #: admin/formatter/class-metabox-formatter.php:129
 #: admin/formatter/class-metabox-formatter.php:159
-#: admin/formatter/class-metabox-formatter.php:189
 #: admin/statistics/class-statistics-service.php:222
 #: inc/class-wpseo-rank.php:141 inc/class-wpseo-rank.php:168
 #: inc/class-wpseo-rank.php:200 js/dist/block-editor.js:1
@@ -4595,7 +4606,7 @@ msgid "Facebook"
 msgstr "Facebook"
 
 #: admin/pages/social.php:21 js/dist/new-settings.js:14
-#: js/dist/new-settings.js:241
+#: js/dist/new-settings.js:246
 msgid "Pinterest"
 msgstr "Pinterest"
 
@@ -4676,7 +4687,7 @@ msgstr "Die URL, auf die diese Seite weitergeleitet werden soll."
 
 #: admin/menu/class-admin-menu.php:89
 #: admin/menu/class-network-admin-menu.php:56 admin/pages/metas.php:18
-#: admin/pages/network.php:18 js/dist/new-settings.js:241
+#: admin/pages/network.php:18 js/dist/new-settings.js:248
 msgid "General"
 msgstr "Allgemein"
 
@@ -4700,7 +4711,7 @@ msgstr "Seiten URL / Titelform"
 msgid "WP Page Title"
 msgstr "WP Seitentitel"
 
-#: admin/class-admin.php:288
+#: admin/class-admin.php:299
 msgid "Facebook profile URL"
 msgstr "URL des Facebook Profils"
 
@@ -4735,7 +4746,7 @@ msgstr "Einstellungen konnten nicht importiert werden:"
 
 #: admin/metabox/class-metabox.php:182 js/dist/externals/analysis.js:393
 #: js/dist/externals/replacementVariableEditor.js:78
-#: js/dist/externals/searchMetadataPreviews.js:243 js/dist/new-settings.js:5
+#: js/dist/externals/searchMetadataPreviews.js:258 js/dist/new-settings.js:5
 #: js/dist/new-settings.js:7 js/dist/new-settings.js:10
 #: js/dist/new-settings.js:14 js/dist/new-settings.js:45
 #: js/dist/new-settings.js:56 js/dist/new-settings.js:80
@@ -4748,7 +4759,7 @@ msgstr "Meta-Beschreibung"
 #: admin/class-yoast-network-admin.php:43
 #: admin/views/tabs/metas/paper-content/breadcrumbs-content.php:47
 #: admin/views/tabs/metas/paper-content/breadcrumbs-content.php:75
-#: src/config/schema-types.php:163 js/dist/new-settings.js:245
+#: src/config/schema-types.php:163 js/dist/new-settings.js:252
 msgid "None"
 msgstr "Keine"
 
@@ -4788,7 +4799,7 @@ msgstr "Titel, der für diese Seite in Breadcrumbs-Pfaden benutzt werden soll"
 msgid "SEO Title"
 msgstr "SEO-Titel"
 
-#: admin/class-admin.php:222 admin/views/redirects.php:42
+#: admin/class-admin.php:224 admin/views/redirects.php:42
 #: src/integrations/settings-integration.php:301
 #: src/presenters/meta-description-presenter.php:37
 #: js/dist/structured-data-blocks.js:9
@@ -4834,7 +4845,7 @@ msgstr "Dateien editieren"
 msgid "Extensions"
 msgstr "Erweiterungen"
 
-#: admin/class-admin.php:227 js/dist/structured-data-blocks.js:13
+#: admin/class-admin.php:229 js/dist/structured-data-blocks.js:13
 msgid "FAQ"
 msgstr "FAQ"
 
@@ -4910,7 +4921,7 @@ msgstr "Beitrag hat einen ungültigen Inhaltstyp: %s."
 msgid "Anchor text for the homepage:"
 msgstr "Anker-Text für die Homepage:"
 
-#: admin/class-admin.php:295
+#: admin/class-admin.php:306
 msgid "Twitter username (without @)"
 msgstr "Twitter-Benutzername (ohne @)"
 
